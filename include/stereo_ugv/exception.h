@@ -31,6 +31,15 @@ private:
   std::shared_ptr<char[]> message_;
 };
 
+/**
+ * @brief The class for parse errors encountered during variable substitution on strings within JSON.
+ */
+class ParseError : public Exception
+{
+public:
+  using Exception::Exception;
+};
+
 }  // namespace stereo_ugv
 
 #endif  // STEREO_UGV_EXCEPTION_H

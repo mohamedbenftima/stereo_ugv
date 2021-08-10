@@ -24,6 +24,10 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
+find_package(OpenCV 4 REQUIRED COMPONENTS
+  core
+)
+
 add_subdirectory(libs/fmt EXCLUDE_FROM_ALL)
 
 set(JSON_BuildTests OFF CACHE INTERNAL "")
@@ -135,16 +139,17 @@ catkin_package(
 
 ## Declare a C++ library
 add_library(${PROJECT_NAME}
+  src/${PROJECT_NAME}/context.cpp
   src/${PROJECT_NAME}/exception.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
-  PUBLIC include
+  PUBLIC include ${OpenCV_INCLUDE_DIRS}
   PRIVATE ${catkin_INCLUDE_DIRS}
 )
 
 target_link_libraries(${PROJECT_NAME}
-  PUBLIC nlohmann_json::nlohmann_json
+  PUBLIC ${OpenCV_LIBRARIES} nlohmann_json::nlohmann_json
   PRIVATE fmt::fmt
 )
 
