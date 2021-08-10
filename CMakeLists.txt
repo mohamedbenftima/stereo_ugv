@@ -9,6 +9,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+  add_compile_options(-Wall -Wextra -pedantic -Werror)
+endif()
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -124,15 +128,25 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)
+# include_directories(
+#   include
+#   ${catkin_INCLUDE_DIRS}
+# )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/stereo_ugv.cpp
-# )
+add_library(${PROJECT_NAME}
+  src/${PROJECT_NAME}/exception.cpp
+)
+
+target_include_directories(${PROJECT_NAME}
+  PUBLIC include
+  PRIVATE ${catkin_INCLUDE_DIRS}
+)
+
+target_link_libraries(${PROJECT_NAME}
+  PUBLIC nlohmann_json::nlohmann_json
+  PRIVATE fmt::fmt
+)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
