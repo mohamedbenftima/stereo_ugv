@@ -1,0 +1,60 @@
+\hypertarget{context_8h}{}\section{/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/context.h File Reference}
+\label{context_8h}\index{/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/context.\+h@{/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/context.\+h}}
+
+
+Defines \hyperlink{classstereo__ugv_1_1Context}{stereo\+\_\+ugv\+::\+Context} and initialization functions of several common types.  
+
+
+{\ttfamily \#include $<$nlohmann/json.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$image\+\_\+transport/image\+\_\+transport.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+Include dependency graph for context.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{context_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{context_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classstereo__ugv_1_1Context}{stereo\+\_\+ugv\+::\+Context}
+\begin{DoxyCompactList}\small\item\em The class for initializing objects from parameters stored in J\+S\+ON files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv}
+\begin{DoxyCompactList}\small\item\em The namespace for public classes and functions of the \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv} package. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}{stereo\+\_\+ugv\+::initialize} (T $\ast$parameter, const Context \&context)
+\begin{DoxyCompactList}\small\item\em Initializes a parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacestereo__ugv_aaa158ec1ee9178414843adbbb91a394b}\label{namespacestereo__ugv_aaa158ec1ee9178414843adbbb91a394b}} 
+void {\bfseries stereo\+\_\+ugv\+::initialize} (std\+::string $\ast$string, const Context \&context)
+\item 
+\mbox{\Hypertarget{namespacestereo__ugv_adab204dc6f43824bcda4cd5e172d2812}\label{namespacestereo__ugv_adab204dc6f43824bcda4cd5e172d2812}} 
+void {\bfseries stereo\+\_\+ugv\+::initialize} (cv\+::\+Size $\ast$size, const Context \&context)
+\item 
+\mbox{\Hypertarget{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}\label{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}} 
+void {\bfseries stereo\+\_\+ugv\+::initialize} (cv\+::\+Term\+Criteria $\ast$criteria, const Context \&context)
+\item 
+\mbox{\Hypertarget{namespacestereo__ugv_aef8f9a951e11f9d5d178db99754aac4b}\label{namespacestereo__ugv_aef8f9a951e11f9d5d178db99754aac4b}} 
+Context {\bfseries stereo\+\_\+ugv\+::open\+Internal\+Context} (nlohmann\+::json $\ast$json, const Context \&context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines \hyperlink{classstereo__ugv_1_1Context}{stereo\+\_\+ugv\+::\+Context} and initialization functions of several common types. 
+

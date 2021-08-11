@@ -1,0 +1,76 @@
+\hypertarget{exception_8h}{}\section{/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/exception.h File Reference}
+\label{exception_8h}\index{/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/exception.\+h@{/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/exception.\+h}}
+
+
+Defines \hyperlink{classstereo__ugv_1_1Exception}{stereo\+\_\+ugv\+::\+Exception} and its subclasses.  
+
+
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for exception.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{exception_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classstereo__ugv_1_1Exception}{stereo\+\_\+ugv\+::\+Exception}
+\begin{DoxyCompactList}\small\item\em The base class for exceptions. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1ParseError}{stereo\+\_\+ugv\+::\+Parse\+Error}
+\begin{DoxyCompactList}\small\item\em The class for parse errors encountered during variable substitution on strings within J\+S\+ON. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1InvalidParameter}{stereo\+\_\+ugv\+::\+Invalid\+Parameter}
+\begin{DoxyCompactList}\small\item\em The class for errors due to unaccepted initialization parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv}
+\begin{DoxyCompactList}\small\item\em The namespace for public classes and functions of the \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv} package. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{exception_8h_a7f56c08588421dff58eeda23a2d41169}{S\+T\+E\+R\+E\+O\+\_\+\+U\+G\+V\+\_\+\+C\+H\+E\+C\+K\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}(condition)
+\begin{DoxyCompactList}\small\item\em Checks the validity of parameters by asserting that the given condition is true. Throws an Invalid\+Parameter if the assertion fails. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines \hyperlink{classstereo__ugv_1_1Exception}{stereo\+\_\+ugv\+::\+Exception} and its subclasses. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{exception_8h_a7f56c08588421dff58eeda23a2d41169}\label{exception_8h_a7f56c08588421dff58eeda23a2d41169}} 
+\index{exception.\+h@{exception.\+h}!S\+T\+E\+R\+E\+O\+\_\+\+U\+G\+V\+\_\+\+C\+H\+E\+C\+K\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{S\+T\+E\+R\+E\+O\+\_\+\+U\+G\+V\+\_\+\+C\+H\+E\+C\+K\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}}
+\index{S\+T\+E\+R\+E\+O\+\_\+\+U\+G\+V\+\_\+\+C\+H\+E\+C\+K\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{S\+T\+E\+R\+E\+O\+\_\+\+U\+G\+V\+\_\+\+C\+H\+E\+C\+K\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}!exception.\+h@{exception.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+E\+R\+E\+O\+\_\+\+U\+G\+V\+\_\+\+C\+H\+E\+C\+K\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}{STEREO\_UGV\_CHECK\_PARAMETER}}
+{\footnotesize\ttfamily \#define S\+T\+E\+R\+E\+O\+\_\+\+U\+G\+V\+\_\+\+C\+H\+E\+C\+K\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}                                                                                                         
+                \(\backslash\)
+  \{                                                                                                        
+                  \(\backslash\)
+    if (!static\_cast<bool>(condition))                                                                     
+                  \(\backslash\)
+    \{                                                                                                      
+                  \(\backslash\)
+      throw \hyperlink{classstereo__ugv_1_1InvalidParameter}{stereo\_ugv::InvalidParameter}\{ \textcolor{stringliteral}{"Failed parameter check \(\backslash\)""} #
+      condition \textcolor{stringliteral}{"\(\backslash\)""} \};                               \(\backslash\)
+    \}                                                                                                      
+                  \(\backslash\)
+  \} \textcolor{keywordflow}{while} (\textcolor{keyword}{false})
+\end{DoxyCode}
+
+
+Checks the validity of parameters by asserting that the given condition is true. Throws an Invalid\+Parameter if the assertion fails. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & A boolean expression that is supposed to be true. \\
+\hline
+\end{DoxyParams}

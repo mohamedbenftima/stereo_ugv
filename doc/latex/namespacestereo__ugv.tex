@@ -1,0 +1,71 @@
+\hypertarget{namespacestereo__ugv}{}\section{stereo\+\_\+ugv Namespace Reference}
+\label{namespacestereo__ugv}\index{stereo\+\_\+ugv@{stereo\+\_\+ugv}}
+
+
+The namespace for public classes and functions of the \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv} package.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classstereo__ugv_1_1Context}{Context}
+\begin{DoxyCompactList}\small\item\em The class for initializing objects from parameters stored in J\+S\+ON files. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1Exception}{Exception}
+\begin{DoxyCompactList}\small\item\em The base class for exceptions. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1FrameLayout}{Frame\+Layout}
+\begin{DoxyCompactList}\small\item\em The base class that defines how images taken by two heads of a stereo camera are positioned in the same frame. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1HPS3D160FrameLayout}{H\+P\+S3\+D160\+Frame\+Layout}
+\begin{DoxyCompactList}\small\item\em The class of frame layout for H\+P\+S-\/3\+D160 cameras. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1InvalidParameter}{Invalid\+Parameter}
+\begin{DoxyCompactList}\small\item\em The class for errors due to unaccepted initialization parameters. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1ParseError}{Parse\+Error}
+\begin{DoxyCompactList}\small\item\em The class for parse errors encountered during variable substitution on strings within J\+S\+ON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}{initialize} (T $\ast$parameter, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\begin{DoxyCompactList}\small\item\em Initializes a parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacestereo__ugv_aaa158ec1ee9178414843adbbb91a394b}\label{namespacestereo__ugv_aaa158ec1ee9178414843adbbb91a394b}} 
+void {\bfseries initialize} (std\+::string $\ast$string, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\item 
+\mbox{\Hypertarget{namespacestereo__ugv_adab204dc6f43824bcda4cd5e172d2812}\label{namespacestereo__ugv_adab204dc6f43824bcda4cd5e172d2812}} 
+void {\bfseries initialize} (cv\+::\+Size $\ast$size, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\item 
+\mbox{\Hypertarget{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}\label{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}} 
+void {\bfseries initialize} (cv\+::\+Term\+Criteria $\ast$criteria, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\item 
+\mbox{\Hypertarget{namespacestereo__ugv_aef8f9a951e11f9d5d178db99754aac4b}\label{namespacestereo__ugv_aef8f9a951e11f9d5d178db99754aac4b}} 
+\hyperlink{classstereo__ugv_1_1Context}{Context} {\bfseries open\+Internal\+Context} (nlohmann\+::json $\ast$json, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\item 
+\mbox{\Hypertarget{namespacestereo__ugv_ac02cc03581ba53b911a9a7bd87f9a24c}\label{namespacestereo__ugv_ac02cc03581ba53b911a9a7bd87f9a24c}} 
+void {\bfseries initialize} (\hyperlink{classstereo__ugv_1_1HPS3D160FrameLayout}{H\+P\+S3\+D160\+Frame\+Layout} $\ast$layout, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The namespace for public classes and functions of the \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv} package. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}\label{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}} 
+\index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
+\index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{T $\ast$}]{parameter,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a parameter. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the parameter to be initialized. It should be directly representable by the J\+S\+ON format, e.\+g. boolean, number, string, etc. Otherwise, a custom overload of this function should be defined and used. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & The parameter to be initialized. \\
+\hline
+{\em context} & The context. \\
+\hline
+\end{DoxyParams}

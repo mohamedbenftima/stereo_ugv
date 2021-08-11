@@ -1,0 +1,4 @@
+<map id="stereo_ugv::Exception" name="stereo_ugv::Exception">
+<area shape="rect" id="node3" href="$classstereo__ugv_1_1InvalidParameter.html" title="The class for errors due to unaccepted initialization parameters. " alt="" coords="5,155,220,181"/>
+<area shape="rect" id="node4" href="$classstereo__ugv_1_1ParseError.html" title="The class for parse errors encountered during variable substitution on strings within JSON..." alt="" coords="244,155,413,181"/>
+</map>

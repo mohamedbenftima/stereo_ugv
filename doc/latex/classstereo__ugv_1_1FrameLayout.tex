@@ -1,0 +1,104 @@
+\hypertarget{classstereo__ugv_1_1FrameLayout}{}\section{stereo\+\_\+ugv\+:\+:Frame\+Layout Class Reference}
+\label{classstereo__ugv_1_1FrameLayout}\index{stereo\+\_\+ugv\+::\+Frame\+Layout@{stereo\+\_\+ugv\+::\+Frame\+Layout}}
+
+
+The base class that defines how images taken by two heads of a stereo camera are positioned in the same frame.  
+
+
+
+
+{\ttfamily \#include $<$frame\+\_\+layout.\+h$>$}
+
+
+
+Inheritance diagram for stereo\+\_\+ugv\+:\+:Frame\+Layout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classstereo__ugv_1_1FrameLayout__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual cv\+::\+Size \hyperlink{classstereo__ugv_1_1FrameLayout_a59da4ac9d0cc6a43cccbf8666849bdc2}{frame\+Size} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the frame size. \end{DoxyCompactList}\item 
+virtual cv\+::\+Size \hyperlink{classstereo__ugv_1_1FrameLayout_a12cc36a89f8e66ffc6a2fa5eb3c5f648}{image\+Size} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the image size. The \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv} package assumes that images taken by two heads of a stereo camera have the same size. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classstereo__ugv_1_1FrameLayout_af5ab49a35cfbb59a79863720e7985d29}{extract\+Images} (const cv\+::\+Mat \&frame, cv\+::\+Mat $\ast$left, cv\+::\+Mat $\ast$right) const =0
+\begin{DoxyCompactList}\small\item\em Extracts images from the given frame. The \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv} package assumes that two heads of a stereo camera are aligned horizontally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstereo__ugv_1_1FrameLayout_a438f24b40bcae9c0b115ba1285601481}\label{classstereo__ugv_1_1FrameLayout_a438f24b40bcae9c0b115ba1285601481}} 
+static std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1FrameLayout}{Frame\+Layout} $>$ {\bfseries create} (const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The base class that defines how images taken by two heads of a stereo camera are positioned in the same frame. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstereo__ugv_1_1FrameLayout_af5ab49a35cfbb59a79863720e7985d29}\label{classstereo__ugv_1_1FrameLayout_af5ab49a35cfbb59a79863720e7985d29}} 
+\index{stereo\+\_\+ugv\+::\+Frame\+Layout@{stereo\+\_\+ugv\+::\+Frame\+Layout}!extract\+Images@{extract\+Images}}
+\index{extract\+Images@{extract\+Images}!stereo\+\_\+ugv\+::\+Frame\+Layout@{stereo\+\_\+ugv\+::\+Frame\+Layout}}
+\subsubsection{\texorpdfstring{extract\+Images()}{extractImages()}}
+{\footnotesize\ttfamily virtual void stereo\+\_\+ugv\+::\+Frame\+Layout\+::extract\+Images (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{frame,  }\item[{cv\+::\+Mat $\ast$}]{left,  }\item[{cv\+::\+Mat $\ast$}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Extracts images from the given frame. The \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv} package assumes that two heads of a stereo camera are aligned horizontally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The frame. \\
+\hline
+{\em left} & The left image to be extracted. \\
+\hline
+{\em right} & The right image to be extracted. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classstereo__ugv_1_1HPS3D160FrameLayout_ab5b1314aa6ab6744a647fb20efe659f1}{stereo\+\_\+ugv\+::\+H\+P\+S3\+D160\+Frame\+Layout}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1FrameLayout_a59da4ac9d0cc6a43cccbf8666849bdc2}\label{classstereo__ugv_1_1FrameLayout_a59da4ac9d0cc6a43cccbf8666849bdc2}} 
+\index{stereo\+\_\+ugv\+::\+Frame\+Layout@{stereo\+\_\+ugv\+::\+Frame\+Layout}!frame\+Size@{frame\+Size}}
+\index{frame\+Size@{frame\+Size}!stereo\+\_\+ugv\+::\+Frame\+Layout@{stereo\+\_\+ugv\+::\+Frame\+Layout}}
+\subsubsection{\texorpdfstring{frame\+Size()}{frameSize()}}
+{\footnotesize\ttfamily virtual cv\+::\+Size stereo\+\_\+ugv\+::\+Frame\+Layout\+::frame\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the frame size. 
+
+\begin{DoxyReturn}{Returns}
+The frame size. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classstereo__ugv_1_1HPS3D160FrameLayout_adce210d36dbcd42c685c2906e6ca37f3}{stereo\+\_\+ugv\+::\+H\+P\+S3\+D160\+Frame\+Layout}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1FrameLayout_a12cc36a89f8e66ffc6a2fa5eb3c5f648}\label{classstereo__ugv_1_1FrameLayout_a12cc36a89f8e66ffc6a2fa5eb3c5f648}} 
+\index{stereo\+\_\+ugv\+::\+Frame\+Layout@{stereo\+\_\+ugv\+::\+Frame\+Layout}!image\+Size@{image\+Size}}
+\index{image\+Size@{image\+Size}!stereo\+\_\+ugv\+::\+Frame\+Layout@{stereo\+\_\+ugv\+::\+Frame\+Layout}}
+\subsubsection{\texorpdfstring{image\+Size()}{imageSize()}}
+{\footnotesize\ttfamily virtual cv\+::\+Size stereo\+\_\+ugv\+::\+Frame\+Layout\+::image\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the image size. The \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv} package assumes that images taken by two heads of a stereo camera have the same size. 
+
+\begin{DoxyReturn}{Returns}
+The image size. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classstereo__ugv_1_1HPS3D160FrameLayout_ac98bc2bb7cb4ed0eb28e33b162252832}{stereo\+\_\+ugv\+::\+H\+P\+S3\+D160\+Frame\+Layout}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{frame__layout_8h}{frame\+\_\+layout.\+h}\end{DoxyCompactItemize}
