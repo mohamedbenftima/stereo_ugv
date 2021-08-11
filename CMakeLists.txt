@@ -141,6 +141,7 @@ catkin_package(
 add_library(${PROJECT_NAME}
   src/${PROJECT_NAME}/context.cpp
   src/${PROJECT_NAME}/exception.cpp
+  src/${PROJECT_NAME}/frame_layout.cpp
 )
 
 target_include_directories(${PROJECT_NAME}

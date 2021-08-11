@@ -40,6 +40,29 @@ public:
   using Exception::Exception;
 };
 
+/**
+ * @brief The class for errors due to unaccepted initialization parameters.
+ */
+class InvalidParameter : public Exception
+{
+public:
+  using Exception::Exception;
+};
+
+/**
+ * @brief Checks the validity of parameters by asserting that the given condition is true. Throws an InvalidParameter if
+ * the assertion fails.
+ * @param condition A boolean expression that is supposed to be true.
+ */
+#define STEREO_UGV_CHECK_PARAMETER(condition)                                                                          \
+  do                                                                                                                   \
+  {                                                                                                                    \
+    if (!static_cast<bool>(condition))                                                                                 \
+    {                                                                                                                  \
+      throw stereo_ugv::InvalidParameter{ "Failed parameter check \"" #condition "\"" };                               \
+    }                                                                                                                  \
+  } while (false)
+
 }  // namespace stereo_ugv
 
 #endif  // STEREO_UGV_EXCEPTION_H

@@ -26,6 +26,8 @@ public:
   Context(const nlohmann::json* parameter_json, const std::unordered_map<std::string, std::string>* variable_map,
           image_transport::ImageTransport* image_transport) noexcept;
 
+  Context(const Context& other, const std::string& key);
+
   const nlohmann::json& parameterJSON() const noexcept;
 
   const std::unordered_map<std::string, std::string>& variableMap() const noexcept;
@@ -43,7 +45,7 @@ public:
   template <typename T>
   void getParameter(const std::string& key, T* parameter) const
   {
-    initialize(parameter, Context{ &parameter_json_->at(key), variable_map_, image_transport_ });
+    initialize(parameter, Context{ *this, key });
   }
 
   /**
@@ -92,6 +94,8 @@ void initialize(std::string* string, const Context& context);
 void initialize(cv::Size* size, const Context& context);
 
 void initialize(cv::TermCriteria* criteria, const Context& context);
+
+Context openInternalContext(nlohmann::json* json, const Context& context);
 
 }  // namespace stereo_ugv
 

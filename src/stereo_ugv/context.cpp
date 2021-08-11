@@ -3,6 +3,7 @@
 
 #include <fmt/core.h>
 
+#include <fstream>
 #include <stack>
 
 namespace stereo_ugv
@@ -16,6 +17,17 @@ namespace stereo_ugv
 Context::Context(const nlohmann::json* parameter_json, const std::unordered_map<std::string, std::string>* variable_map,
                  image_transport::ImageTransport* image_transport) noexcept
   : parameter_json_{ parameter_json }, variable_map_{ variable_map }, image_transport_{ image_transport }
+{
+}
+
+/**
+ * @brief Creates a new context based on the given original context, except that the new underlying JSON is the child of
+ * the original underlying JSON at the given key.
+ * @param other The original context.
+ * @param key The key of the original underlying JSON object.
+ */
+Context::Context(const Context& other, const std::string& key)
+  : Context{ &other.parameter_json_->at(key), other.variable_map_, other.image_transport_ }
 {
 }
 
@@ -177,6 +189,46 @@ void initialize(cv::TermCriteria* criteria, const Context& context)
     epsilon.get_to(criteria->epsilon);
     criteria->type |= cv::TermCriteria::EPS;
   }
+}
+
+/**
+ * @brief Opens the internal context whose variable JSON is stored in a separate file.
+ * @details A separate file that stores the variable JSON should be referenced as follows:
+ * @code
+ * {
+ *   "type": "file",
+ *   "filename": <string>
+ * }
+ * @code
+ * @param json The variable JSON file to be opened. It will not be assigned if no variable JSON file is referenced.
+ * @param context The context on the surface.
+ * @return If the operation was successful, i.e. a separate file is referenced that stores the variable JSON, returns a
+ * new context created with this internal JSON. Otherwise, returns the original context passed into this function.
+ */
+Context openInternalContext(nlohmann::json* json, const Context& context)
+{
+  const auto surface_json{ &context.parameterJSON() };
+
+  std::string type;
+  surface_json->at("type").get_to(type);
+  if (type != "file")
+  {
+    return context;
+  }
+
+  std::string filename;
+  surface_json->at("filename").get_to(filename);
+  std::ifstream stream{ substituteVariables(filename, context.variableMap()) };
+  *json = nlohmann::json::parse(stream);
+
+  while (json->is_object() && json->at("type").get_to(type) == "file")
+  {
+    json->at("filename").get_to(filename);
+    stream.open(substituteVariables(filename, context.variableMap()));
+    *json = nlohmann::json::parse(stream);
+  }
+
+  return { json, &context.variableMap(), &context.imageTransport() };
 }
 
 }  // namespace stereo_ugv
