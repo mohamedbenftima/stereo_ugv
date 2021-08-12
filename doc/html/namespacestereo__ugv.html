@@ -88,8 +88,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1InvalidParameter.html">InvalidParameter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for errors due to unaccepted initialization parameters.  <a href="classstereo__ugv_1_1InvalidParameter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1OutOfFrames.html">OutOfFrames</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class of exception thrown when an image source is running out of frames.  <a href="classstereo__ugv_1_1OutOfFrames.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1ParseError.html">ParseError</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for parse errors encountered during variable substitution on strings within JSON.  <a href="classstereo__ugv_1_1ParseError.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1RuntimeError.html">RuntimeError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for errors that are not due to programming errors and do not have a clear cause.  <a href="classstereo__ugv_1_1RuntimeError.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -113,10 +119,41 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (cv::T
 <tr class="memitem:ac02cc03581ba53b911a9a7bd87f9a24c"><td class="memItemLeft" align="right" valign="top"><a id="ac02cc03581ba53b911a9a7bd87f9a24c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (<a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html">HPS3D160FrameLayout</a> *layout, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
 <tr class="separator:ac02cc03581ba53b911a9a7bd87f9a24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af45c67058883fb26e2c27945af6ab490"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#af45c67058883fb26e2c27945af6ab490">findCameraCharacterDeviceFile</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:af45c67058883fb26e2c27945af6ab490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the character device file of a camera device given the prefix of its device name.  <a href="#af45c67058883fb26e2c27945af6ab490">More...</a><br /></td></tr>
+<tr class="separator:af45c67058883fb26e2c27945af6ab490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The namespace for public classes and functions of the <a class="el" href="namespacestereo__ugv.html" title="The namespace for public classes and functions of the stereo_ugv package. ">stereo_ugv</a> package. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="af45c67058883fb26e2c27945af6ab490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45c67058883fb26e2c27945af6ab490">&#9670;&nbsp;</a></span>findCameraCharacterDeviceFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string stereo_ugv::findCameraCharacterDeviceFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds the character device file of a camera device given the prefix of its device name. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This function has not been implemented, and calling it will always cause a <a class="el" href="classstereo__ugv_1_1RuntimeError.html" title="The class for errors that are not due to programming errors and do not have a clear cause...">RuntimeError</a>. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device_name_prefix</td><td>The prefix of its device name. Due to the limits of the V4L2 API, device names longer than 31 characters are truncated. Therefore, the length of the given prefix should not be longer than 31 characters. Otherwise, no matching camera can be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The full path to the character device file. If multiple matching cameras are detected, the function issues a warning and returns any one among them. </dd></dl>
+
+</div>
+</div>
 <a id="a6971cc11001fdf589a71f6fb3099c65b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6971cc11001fdf589a71f6fb3099c65b">&#9670;&nbsp;</a></span>initialize()</h2>
 

@@ -18,8 +18,12 @@ class \hyperlink{classstereo__ugv_1_1HPS3D160FrameLayout}{H\+P\+S3\+D160\+Frame\
 \begin{DoxyCompactList}\small\item\em The class of frame layout for H\+P\+S-\/3\+D160 cameras. \end{DoxyCompactList}\item 
 class \hyperlink{classstereo__ugv_1_1InvalidParameter}{Invalid\+Parameter}
 \begin{DoxyCompactList}\small\item\em The class for errors due to unaccepted initialization parameters. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1OutOfFrames}{Out\+Of\+Frames}
+\begin{DoxyCompactList}\small\item\em The class of exception thrown when an image source is running out of frames. \end{DoxyCompactList}\item 
 class \hyperlink{classstereo__ugv_1_1ParseError}{Parse\+Error}
-\begin{DoxyCompactList}\small\item\em The class for parse errors encountered during variable substitution on strings within J\+S\+ON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The class for parse errors encountered during variable substitution on strings within J\+S\+ON. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1RuntimeError}{Runtime\+Error}
+\begin{DoxyCompactList}\small\item\em The class for errors that are not due to programming errors and do not have a clear cause. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,13 +43,36 @@ void {\bfseries initialize} (cv\+::\+Term\+Criteria $\ast$criteria, const \hyper
 \item 
 \mbox{\Hypertarget{namespacestereo__ugv_ac02cc03581ba53b911a9a7bd87f9a24c}\label{namespacestereo__ugv_ac02cc03581ba53b911a9a7bd87f9a24c}} 
 void {\bfseries initialize} (\hyperlink{classstereo__ugv_1_1HPS3D160FrameLayout}{H\+P\+S3\+D160\+Frame\+Layout} $\ast$layout, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
-\end{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{namespacestereo__ugv_af45c67058883fb26e2c27945af6ab490}{find\+Camera\+Character\+Device\+File} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Finds the character device file of a camera device given the prefix of its device name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 The namespace for public classes and functions of the \hyperlink{namespacestereo__ugv}{stereo\+\_\+ugv} package. 
 
 \subsection{Function Documentation}
+\mbox{\Hypertarget{namespacestereo__ugv_af45c67058883fb26e2c27945af6ab490}\label{namespacestereo__ugv_af45c67058883fb26e2c27945af6ab490}} 
+\index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!find\+Camera\+Character\+Device\+File@{find\+Camera\+Character\+Device\+File}}
+\index{find\+Camera\+Character\+Device\+File@{find\+Camera\+Character\+Device\+File}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
+\subsubsection{\texorpdfstring{find\+Camera\+Character\+Device\+File()}{findCameraCharacterDeviceFile()}}
+{\footnotesize\ttfamily std\+::string stereo\+\_\+ugv\+::find\+Camera\+Character\+Device\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Finds the character device file of a camera device given the prefix of its device name. 
+
+\begin{DoxyWarning}{Warning}
+This function has not been implemented, and calling it will always cause a \hyperlink{classstereo__ugv_1_1RuntimeError}{Runtime\+Error}. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+name\+\_\+prefix} & The prefix of its device name. Due to the limits of the V4\+L2 A\+PI, device names longer than 31 characters are truncated. Therefore, the length of the given prefix should not be longer than 31 characters. Otherwise, no matching camera can be found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The full path to the character device file. If multiple matching cameras are detected, the function issues a warning and returns any one among them. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}\label{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}

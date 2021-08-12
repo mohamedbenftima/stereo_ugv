@@ -1,4 +1,6 @@
 <map id="stereo_ugv::Exception" name="stereo_ugv::Exception">
-<area shape="rect" id="node3" href="$classstereo__ugv_1_1InvalidParameter.html" title="The class for errors due to unaccepted initialization parameters. " alt="" coords="5,155,220,181"/>
-<area shape="rect" id="node4" href="$classstereo__ugv_1_1ParseError.html" title="The class for parse errors encountered during variable substitution on strings within JSON..." alt="" coords="244,155,413,181"/>
+<area shape="rect" id="node3" href="$classstereo__ugv_1_1InvalidParameter.html" title="The class for errors due to unaccepted initialization parameters. " alt="" coords="383,5,597,32"/>
+<area shape="rect" id="node4" href="$classstereo__ugv_1_1OutOfFrames.html" title="The class of exception thrown when an image source is running out of frames. " alt="" coords="396,56,584,83"/>
+<area shape="rect" id="node5" href="$classstereo__ugv_1_1ParseError.html" title="The class for parse errors encountered during variable substitution on strings within JSON..." alt="" coords="405,107,575,133"/>
+<area shape="rect" id="node6" href="$classstereo__ugv_1_1RuntimeError.html" title="The class for errors that are not due to programming errors and do not have a clear cause..." alt="" coords="396,157,584,184"/>
 </map>

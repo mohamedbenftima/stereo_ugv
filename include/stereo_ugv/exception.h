@@ -63,6 +63,24 @@ public:
     }                                                                                                                  \
   } while (false)
 
+/**
+ * @brief The class for errors that are not due to programming errors and do not have a clear cause.
+ */
+class RuntimeError : public Exception
+{
+public:
+  using Exception::Exception;
+};
+
+/**
+ * @brief The class of exception thrown when an image source is running out of frames.
+ */
+class OutOfFrames : public Exception
+{
+public:
+  using Exception::Exception;
+};
+
 }  // namespace stereo_ugv
 
 #endif  // STEREO_UGV_EXCEPTION_H
