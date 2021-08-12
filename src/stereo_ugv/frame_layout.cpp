@@ -67,7 +67,7 @@ void HPS3D160FrameLayout::extractImages(const cv::Mat& frame, cv::Mat* left, cv:
  * {
  *   "imageSize": <cv::Size>
  * }
- * @code
+ * @endcode
  * @param layout The layout to be initialized.
  * @param context The context.
  */

@@ -1,0 +1,139 @@
+\hypertarget{classstereo__ugv_1_1CvVideoCaptureImageSource}{}\section{stereo\+\_\+ugv\+:\+:Cv\+Video\+Capture\+Image\+Source$<$ Type $>$ Class Template Reference}
+\label{classstereo__ugv_1_1CvVideoCaptureImageSource}\index{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source$<$ Type $>$@{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source$<$ Type $>$}}
+
+
+Class for image sources backended by cv\+::\+Video\+Capture.  
+
+
+
+
+{\ttfamily \#include $<$image\+\_\+source.\+h$>$}
+
+
+
+Inheritance diagram for stereo\+\_\+ugv\+:\+:Cv\+Video\+Capture\+Image\+Source$<$ Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classstereo__ugv_1_1CvVideoCaptureImageSource__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for stereo\+\_\+ugv\+:\+:Cv\+Video\+Capture\+Image\+Source$<$ Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classstereo__ugv_1_1CvVideoCaptureImageSource__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource_a70f8c34dd228771d141fee7027cbc211}{set\+Frame\+Layout} (std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1FrameLayout}{Frame\+Layout} $>$ \&\&layout)
+\begin{DoxyCompactList}\small\item\em Sets the frame layout. \end{DoxyCompactList}\item 
+void \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource_a47e4a18163b03d4d716284292dbb1d24}{open\+Video\+Capture} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Opens the video capture at the given filename. \end{DoxyCompactList}\item 
+virtual cv\+::\+Size \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource_a84dd7dbd0ff6091d68843ca02a18e0cc}{image\+Size} () const override
+\begin{DoxyCompactList}\small\item\em Gets the image size. The Stereo U\+GV package assumes that images taken by two heads of a stereo camera have the same size. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource_a6636c97811bb28d59453c3865b0bda69}{read\+Images} (cv\+::\+Mat $\ast$left, cv\+::\+Mat $\ast$right) override
+\begin{DoxyCompactList}\small\item\em Reads a pair of images of the next frame. The Stereo U\+GV package assumes that two heads of a stereo camera are aligned horizontally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$Cv\+Video\+Capture\+Type Type$>$\newline
+class stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source$<$ Type $>$}
+
+Class for image sources backended by cv\+::\+Video\+Capture. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & The type of image source. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstereo__ugv_1_1CvVideoCaptureImageSource_a84dd7dbd0ff6091d68843ca02a18e0cc}\label{classstereo__ugv_1_1CvVideoCaptureImageSource_a84dd7dbd0ff6091d68843ca02a18e0cc}} 
+\index{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source@{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}!image\+Size@{image\+Size}}
+\index{image\+Size@{image\+Size}!stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source@{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}}
+\subsubsection{\texorpdfstring{image\+Size()}{imageSize()}}
+{\footnotesize\ttfamily template$<$Cv\+Video\+Capture\+Type Type$>$ \\
+virtual cv\+::\+Size \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource}{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}$<$ Type $>$\+::image\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the image size. The Stereo U\+GV package assumes that images taken by two heads of a stereo camera have the same size. 
+
+\begin{DoxyReturn}{Returns}
+The image size. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classstereo__ugv_1_1ImageSource_a30d9146abcdcef11f03685a9887b96d0}{stereo\+\_\+ugv\+::\+Image\+Source}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1CvVideoCaptureImageSource_a47e4a18163b03d4d716284292dbb1d24}\label{classstereo__ugv_1_1CvVideoCaptureImageSource_a47e4a18163b03d4d716284292dbb1d24}} 
+\index{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source@{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}!open\+Video\+Capture@{open\+Video\+Capture}}
+\index{open\+Video\+Capture@{open\+Video\+Capture}!stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source@{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}}
+\subsubsection{\texorpdfstring{open\+Video\+Capture()}{openVideoCapture()}}
+{\footnotesize\ttfamily template$<$Cv\+Video\+Capture\+Type Type$>$ \\
+void \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource}{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}$<$ Type $>$\+::open\+Video\+Capture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Opens the video capture at the given filename. 
+
+\begin{DoxyWarning}{Warning}
+The frame layout must be set before calling this method, because this method relies on the frame layout to provide the frame size used to initialize the image source. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & If the type is C\+A\+M\+E\+RA, it is the name of the character device file. If the type if I\+M\+A\+G\+ES, it is the pattern of the image sequence filenames. If the type if V\+I\+D\+EO, it is the name of the video file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1CvVideoCaptureImageSource_a6636c97811bb28d59453c3865b0bda69}\label{classstereo__ugv_1_1CvVideoCaptureImageSource_a6636c97811bb28d59453c3865b0bda69}} 
+\index{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source@{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}!read\+Images@{read\+Images}}
+\index{read\+Images@{read\+Images}!stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source@{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}}
+\subsubsection{\texorpdfstring{read\+Images()}{readImages()}}
+{\footnotesize\ttfamily template$<$Cv\+Video\+Capture\+Type Type$>$ \\
+virtual void \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource}{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}$<$ Type $>$\+::read\+Images (\begin{DoxyParamCaption}\item[{cv\+::\+Mat $\ast$}]{left,  }\item[{cv\+::\+Mat $\ast$}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads a pair of images of the next frame. The Stereo U\+GV package assumes that two heads of a stereo camera are aligned horizontally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The image taken by the left head. \\
+\hline
+{\em right} & The image taken by the right head. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classstereo__ugv_1_1ImageSource_a3d87f7b09cd8889fcbee3efb29a0c39c}{stereo\+\_\+ugv\+::\+Image\+Source}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1CvVideoCaptureImageSource_a70f8c34dd228771d141fee7027cbc211}\label{classstereo__ugv_1_1CvVideoCaptureImageSource_a70f8c34dd228771d141fee7027cbc211}} 
+\index{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source@{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}!set\+Frame\+Layout@{set\+Frame\+Layout}}
+\index{set\+Frame\+Layout@{set\+Frame\+Layout}!stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source@{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}}
+\subsubsection{\texorpdfstring{set\+Frame\+Layout()}{setFrameLayout()}}
+{\footnotesize\ttfamily template$<$Cv\+Video\+Capture\+Type Type$>$ \\
+void \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource}{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source}$<$ Type $>$\+::set\+Frame\+Layout (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1FrameLayout}{Frame\+Layout} $>$ \&\&}]{layout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the frame layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layout} & The frame layout. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{image__source_8h}{image\+\_\+source.\+h}\end{DoxyCompactItemize}

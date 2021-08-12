@@ -28,14 +28,14 @@ public:
   static std::unique_ptr<ImageSource> create(const Context& context);
 
   /**
-   * @brief Gets the image size. The stereo_ugv package assumes that images taken by two heads of a stereo camera have
+   * @brief Gets the image size. The Stereo UGV package assumes that images taken by two heads of a stereo camera have
    * the same size.
    * @return The image size.
    */
   virtual cv::Size imageSize() const = 0;
 
   /**
-   * @brief Reads a pair of images of the next frame. The stereo_ugv package assumes that two heads of a stereo camera
+   * @brief Reads a pair of images of the next frame. The Stereo UGV package assumes that two heads of a stereo camera
    * are aligned horizontally.
    * @param left The image taken by the left head.
    * @param right The image taken by the right head.
@@ -85,8 +85,8 @@ public:
    * @brief Opens the video capture at the given filename.
    * @warning The frame layout must be set before calling this method, because this method relies on the frame layout to
    * provide the frame size used to initialize the image source.
-   * @param filname If the type is CAMERA, it is the name of the character device file. If the type if IMAGES, it is the
-   * pattern of the image sequence filenames. If the type if VIDEO, it is the name of the video file.
+   * @param filename If the type is CAMERA, it is the name of the character device file. If the type if IMAGES, it is
+   * the pattern of the image sequence filenames. If the type if VIDEO, it is the name of the video file.
    */
   void openVideoCapture(const std::string& filename)
   {
@@ -177,28 +177,28 @@ std::string findCameraCharacterDeviceFile(const std::string& device_name_prefix)
  *   "type": <string>,
  *   ...
  * }
- * @code
+ * @endcode
  * where ... means type-specific entries. For "camera":
  * @code
  * {
  *   ...
  *   "deviceNamePrefix": <string>
  * }
- * @code
+ * @endcode
  * For "images":
  * @code
  * {
  *   ...
  *   "filenamePattern": <string>
  * }
- * @code
+ * @endcode
  * For "video":
  * @code
  * {
  *   ...
  *   "filename": <string>
  * }
- * @code
+ * @endcode
  * @param source The image source to be initialized.
  * @param context The context.
  */

@@ -92,21 +92,56 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a59da4ac9d0cc6a43cccbf8666849bdc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the frame size.  <a href="#a59da4ac9d0cc6a43cccbf8666849bdc2">More...</a><br /></td></tr>
 <tr class="separator:a59da4ac9d0cc6a43cccbf8666849bdc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12cc36a89f8e66ffc6a2fa5eb3c5f648"><td class="memItemLeft" align="right" valign="top">virtual cv::Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1FrameLayout.html#a12cc36a89f8e66ffc6a2fa5eb3c5f648">imageSize</a> () const =0</td></tr>
-<tr class="memdesc:a12cc36a89f8e66ffc6a2fa5eb3c5f648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the image size. The <a class="el" href="namespacestereo__ugv.html" title="The namespace for public classes and functions of the stereo_ugv package. ">stereo_ugv</a> package assumes that images taken by two heads of a stereo camera have the same size.  <a href="#a12cc36a89f8e66ffc6a2fa5eb3c5f648">More...</a><br /></td></tr>
+<tr class="memdesc:a12cc36a89f8e66ffc6a2fa5eb3c5f648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the image size. The Stereo UGV package assumes that images taken by two heads of a stereo camera have the same size.  <a href="#a12cc36a89f8e66ffc6a2fa5eb3c5f648">More...</a><br /></td></tr>
 <tr class="separator:a12cc36a89f8e66ffc6a2fa5eb3c5f648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5ab49a35cfbb59a79863720e7985d29"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1FrameLayout.html#af5ab49a35cfbb59a79863720e7985d29">extractImages</a> (const cv::Mat &amp;frame, cv::Mat *left, cv::Mat *right) const =0</td></tr>
-<tr class="memdesc:af5ab49a35cfbb59a79863720e7985d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts images from the given frame. The <a class="el" href="namespacestereo__ugv.html" title="The namespace for public classes and functions of the stereo_ugv package. ">stereo_ugv</a> package assumes that two heads of a stereo camera are aligned horizontally.  <a href="#af5ab49a35cfbb59a79863720e7985d29">More...</a><br /></td></tr>
+<tr class="memdesc:af5ab49a35cfbb59a79863720e7985d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts images from the given frame. The Stereo UGV package assumes that two heads of a stereo camera are aligned horizontally.  <a href="#af5ab49a35cfbb59a79863720e7985d29">More...</a><br /></td></tr>
 <tr class="separator:af5ab49a35cfbb59a79863720e7985d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a438f24b40bcae9c0b115ba1285601481"><td class="memItemLeft" align="right" valign="top"><a id="a438f24b40bcae9c0b115ba1285601481"></a>
-static std::unique_ptr&lt; <a class="el" href="classstereo__ugv_1_1FrameLayout.html">FrameLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
-<tr class="separator:a438f24b40bcae9c0b115ba1285601481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaaac30572f6e3b6fc88da66873c2e77"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classstereo__ugv_1_1FrameLayout.html">FrameLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1FrameLayout.html#adaaac30572f6e3b6fc88da66873c2e77">create</a> (const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:adaaac30572f6e3b6fc88da66873c2e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classstereo__ugv_1_1FrameLayout.html" title="The base class that defines how images taken by two heads of a stereo camera are positioned in the sa...">FrameLayout</a>.  <a href="#adaaac30572f6e3b6fc88da66873c2e77">More...</a><br /></td></tr>
+<tr class="separator:adaaac30572f6e3b6fc88da66873c2e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The base class that defines how images taken by two heads of a stereo camera are positioned in the same frame. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="adaaac30572f6e3b6fc88da66873c2e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaaac30572f6e3b6fc88da66873c2e77">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classstereo__ugv_1_1FrameLayout.html">FrameLayout</a> &gt; stereo_ugv::FrameLayout::create </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="classstereo__ugv_1_1FrameLayout.html" title="The base class that defines how images taken by two heads of a stereo camera are positioned in the sa...">FrameLayout</a>. </p>
+<p>The function determines the concrete subclass of the layout to be created by looking up the "type" key, and calls the corresponding initialization function. Currently, only "HPS-3D160" is supported. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>The context containing initialization parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A unique pointer to the created layout. </dd></dl>
+
+</div>
+</div>
 <a id="af5ab49a35cfbb59a79863720e7985d29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5ab49a35cfbb59a79863720e7985d29">&#9670;&nbsp;</a></span>extractImages()</h2>
 
@@ -147,7 +182,7 @@ static std::unique_ptr&lt; <a class="el" href="classstereo__ugv_1_1FrameLayout.h
 </table>
 </div><div class="memdoc">
 
-<p>Extracts images from the given frame. The <a class="el" href="namespacestereo__ugv.html" title="The namespace for public classes and functions of the stereo_ugv package. ">stereo_ugv</a> package assumes that two heads of a stereo camera are aligned horizontally. </p>
+<p>Extracts images from the given frame. The Stereo UGV package assumes that two heads of a stereo camera are aligned horizontally. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frame</td><td>The frame. </td></tr>
@@ -157,7 +192,7 @@ static std::unique_ptr&lt; <a class="el" href="classstereo__ugv_1_1FrameLayout.h
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html#ab5b1314aa6ab6744a647fb20efe659f1">stereo_ugv::HPS3D160FrameLayout</a>.</p>
+<p>Implemented in <a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html#a224d3fddea38c0c564baa8d391a396fa">stereo_ugv::HPS3D160FrameLayout</a>.</p>
 
 </div>
 </div>
@@ -187,7 +222,7 @@ static std::unique_ptr&lt; <a class="el" href="classstereo__ugv_1_1FrameLayout.h
 <p>Gets the frame size. </p>
 <dl class="section return"><dt>Returns</dt><dd>The frame size. </dd></dl>
 
-<p>Implemented in <a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html#adce210d36dbcd42c685c2906e6ca37f3">stereo_ugv::HPS3D160FrameLayout</a>.</p>
+<p>Implemented in <a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html#add697132a4d32b0f1fc49f35f3b8fa0f">stereo_ugv::HPS3D160FrameLayout</a>.</p>
 
 </div>
 </div>
@@ -214,15 +249,16 @@ static std::unique_ptr&lt; <a class="el" href="classstereo__ugv_1_1FrameLayout.h
 </table>
 </div><div class="memdoc">
 
-<p>Gets the image size. The <a class="el" href="namespacestereo__ugv.html" title="The namespace for public classes and functions of the stereo_ugv package. ">stereo_ugv</a> package assumes that images taken by two heads of a stereo camera have the same size. </p>
+<p>Gets the image size. The Stereo UGV package assumes that images taken by two heads of a stereo camera have the same size. </p>
 <dl class="section return"><dt>Returns</dt><dd>The image size. </dd></dl>
 
-<p>Implemented in <a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html#ac98bc2bb7cb4ed0eb28e33b162252832">stereo_ugv::HPS3D160FrameLayout</a>.</p>
+<p>Implemented in <a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html#ab7fb47261d8a8132ac0ca7a15b69500e">stereo_ugv::HPS3D160FrameLayout</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/yunhao/stereo_ugv/src/stereo_ugv/include/stereo_ugv/<a class="el" href="frame__layout_8h_source.html">frame_layout.h</a></li>
+<li>/home/yunhao/stereo_ugv/src/stereo_ugv/src/stereo_ugv/frame_layout.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

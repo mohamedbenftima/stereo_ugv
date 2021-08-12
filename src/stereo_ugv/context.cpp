@@ -153,7 +153,7 @@ void initialize(std::string* string, const Context& context)
  *   "width": <integer>,
  *   "height": <integer>
  * }
- * @code
+ * @endcode
  * @param size The size to be initialized.
  * @param context The context.
  */
@@ -171,7 +171,7 @@ void initialize(cv::Size* size, const Context& context)
  *   "maxCount": <null | integer>,
  *   "epsilon": <null | number>
  * }
- * @code
+ * @endcode
  * @param criteria The criteria to be initialized.
  * @param context The context.
  */
@@ -199,7 +199,7 @@ void initialize(cv::TermCriteria* criteria, const Context& context)
  *   "type": "file",
  *   "filename": <string>
  * }
- * @code
+ * @endcode
  * @param json The variable JSON file to be opened. It will not be assigned if no variable JSON file is referenced.
  * @param context The context on the surface.
  * @return If the operation was successful, i.e. a separate file is referenced that stores the variable JSON, returns a

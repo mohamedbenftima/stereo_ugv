@@ -11,7 +11,7 @@
 #include <string>
 
 /**
- * @brief The namespace for public classes and functions of the stereo_ugv package.
+ * @brief The namespace for public classes and functions of the Stereo UGV package.
  */
 namespace stereo_ugv
 {

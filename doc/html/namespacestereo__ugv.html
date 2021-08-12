@@ -62,19 +62,23 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">stereo_ugv Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>The namespace for public classes and functions of the <a class="el" href="namespacestereo__ugv.html" title="The namespace for public classes and functions of the stereo_ugv package. ">stereo_ugv</a> package.  
+<p>The namespace for public classes and functions of the Stereo UGV package.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1Context.html">Context</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for initializing objects from parameters stored in JSON files.  <a href="classstereo__ugv_1_1Context.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1CvVideoCaptureImageSource.html">CvVideoCaptureImageSource</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for image sources backended by cv::VideoCapture.  <a href="classstereo__ugv_1_1CvVideoCaptureImageSource.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1Exception.html">Exception</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for exceptions.  <a href="classstereo__ugv_1_1Exception.html#details">More...</a><br /></td></tr>
@@ -84,6 +88,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html">HPS3D160FrameLayout</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class of frame layout for HPS-3D160 cameras.  <a href="classstereo__ugv_1_1HPS3D160FrameLayout.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1ImageSource.html">ImageSource</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class that reads a pair of images taken by a stereo camera at a time from various sources.  <a href="classstereo__ugv_1_1ImageSource.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1InvalidParameter.html">InvalidParameter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for errors due to unaccepted initialization parameters.  <a href="classstereo__ugv_1_1InvalidParameter.html#details">More...</a><br /></td></tr>
@@ -98,34 +105,80 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for errors that are not due to programming errors and do not have a clear cause.  <a href="classstereo__ugv_1_1RuntimeError.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a5c139e7cfac12e9270ca903f1ce2e4bc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#a5c139e7cfac12e9270ca903f1ce2e4bc">CvVideoCaptureType</a> { <a class="el" href="namespacestereo__ugv.html#a5c139e7cfac12e9270ca903f1ce2e4bcaddf0d6b21537d984fea6544f58101fa8">CvVideoCaptureType::CAMERA</a>, 
+<a class="el" href="namespacestereo__ugv.html#a5c139e7cfac12e9270ca903f1ce2e4bcab34687a3607271050f02aa9bf90c731a">CvVideoCaptureType::IMAGES</a>, 
+<a class="el" href="namespacestereo__ugv.html#a5c139e7cfac12e9270ca903f1ce2e4bcae60ae31f67ab883c746bb71c7a145c18">CvVideoCaptureType::VIDEO</a>
+ }<tr class="memdesc:a5c139e7cfac12e9270ca903f1ce2e4bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of image sources backended by cv::VideoCapture.  <a href="namespacestereo__ugv.html#a5c139e7cfac12e9270ca903f1ce2e4bc">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a5c139e7cfac12e9270ca903f1ce2e4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6971cc11001fdf589a71f6fb3099c65b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6971cc11001fdf589a71f6fb3099c65b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#a6971cc11001fdf589a71f6fb3099c65b">initialize</a> (T *parameter, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
 <tr class="memdesc:a6971cc11001fdf589a71f6fb3099c65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a parameter.  <a href="#a6971cc11001fdf589a71f6fb3099c65b">More...</a><br /></td></tr>
 <tr class="separator:a6971cc11001fdf589a71f6fb3099c65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa158ec1ee9178414843adbbb91a394b"><td class="memItemLeft" align="right" valign="top"><a id="aaa158ec1ee9178414843adbbb91a394b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (std::string *string, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memitem:aaa158ec1ee9178414843adbbb91a394b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#aaa158ec1ee9178414843adbbb91a394b">initialize</a> (std::string *string, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:aaa158ec1ee9178414843adbbb91a394b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes an std::string and performs variable substitution.  <a href="#aaa158ec1ee9178414843adbbb91a394b">More...</a><br /></td></tr>
 <tr class="separator:aaa158ec1ee9178414843adbbb91a394b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adab204dc6f43824bcda4cd5e172d2812"><td class="memItemLeft" align="right" valign="top"><a id="adab204dc6f43824bcda4cd5e172d2812"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (cv::Size *size, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memitem:adab204dc6f43824bcda4cd5e172d2812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#adab204dc6f43824bcda4cd5e172d2812">initialize</a> (cv::Size *size, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:adab204dc6f43824bcda4cd5e172d2812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a cv::Size.  <a href="#adab204dc6f43824bcda4cd5e172d2812">More...</a><br /></td></tr>
 <tr class="separator:adab204dc6f43824bcda4cd5e172d2812"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a98148c84d1f085ac51c2f2fb7c8e7a"><td class="memItemLeft" align="right" valign="top"><a id="a0a98148c84d1f085ac51c2f2fb7c8e7a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (cv::TermCriteria *criteria, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memitem:a0a98148c84d1f085ac51c2f2fb7c8e7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#a0a98148c84d1f085ac51c2f2fb7c8e7a">initialize</a> (cv::TermCriteria *criteria, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:a0a98148c84d1f085ac51c2f2fb7c8e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a cv::TermCriteria.  <a href="#a0a98148c84d1f085ac51c2f2fb7c8e7a">More...</a><br /></td></tr>
 <tr class="separator:a0a98148c84d1f085ac51c2f2fb7c8e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef8f9a951e11f9d5d178db99754aac4b"><td class="memItemLeft" align="right" valign="top"><a id="aef8f9a951e11f9d5d178db99754aac4b"></a>
-<a class="el" href="classstereo__ugv_1_1Context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><b>openInternalContext</b> (nlohmann::json *json, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memitem:aef8f9a951e11f9d5d178db99754aac4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstereo__ugv_1_1Context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#aef8f9a951e11f9d5d178db99754aac4b">openInternalContext</a> (nlohmann::json *json, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:aef8f9a951e11f9d5d178db99754aac4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the internal context whose variable JSON is stored in a separate file.  <a href="#aef8f9a951e11f9d5d178db99754aac4b">More...</a><br /></td></tr>
 <tr class="separator:aef8f9a951e11f9d5d178db99754aac4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac02cc03581ba53b911a9a7bd87f9a24c"><td class="memItemLeft" align="right" valign="top"><a id="ac02cc03581ba53b911a9a7bd87f9a24c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (<a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html">HPS3D160FrameLayout</a> *layout, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memitem:ac02cc03581ba53b911a9a7bd87f9a24c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#ac02cc03581ba53b911a9a7bd87f9a24c">initialize</a> (<a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html">HPS3D160FrameLayout</a> *layout, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:ac02cc03581ba53b911a9a7bd87f9a24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes an <a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html" title="The class of frame layout for HPS-3D160 cameras. ">HPS3D160FrameLayout</a>.  <a href="#ac02cc03581ba53b911a9a7bd87f9a24c">More...</a><br /></td></tr>
 <tr class="separator:ac02cc03581ba53b911a9a7bd87f9a24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af45c67058883fb26e2c27945af6ab490"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#af45c67058883fb26e2c27945af6ab490">findCameraCharacterDeviceFile</a> (const std::string &amp;)</td></tr>
 <tr class="memdesc:af45c67058883fb26e2c27945af6ab490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the character device file of a camera device given the prefix of its device name.  <a href="#af45c67058883fb26e2c27945af6ab490">More...</a><br /></td></tr>
 <tr class="separator:af45c67058883fb26e2c27945af6ab490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaec0936792769b5d676773f7d4070cd"><td class="memTemplParams" colspan="2">template&lt;CvVideoCaptureType Type&gt; </td></tr>
+<tr class="memitem:acaec0936792769b5d676773f7d4070cd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#acaec0936792769b5d676773f7d4070cd">initialize</a> (<a class="el" href="classstereo__ugv_1_1CvVideoCaptureImageSource.html">CvVideoCaptureImageSource</a>&lt; Type &gt; *source, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:acaec0936792769b5d676773f7d4070cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a CvVideoCaptureImageSource&lt;Type&gt;.  <a href="#acaec0936792769b5d676773f7d4070cd">More...</a><br /></td></tr>
+<tr class="separator:acaec0936792769b5d676773f7d4070cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The namespace for public classes and functions of the <a class="el" href="namespacestereo__ugv.html" title="The namespace for public classes and functions of the stereo_ugv package. ">stereo_ugv</a> package. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<div class="textblock"><p>The namespace for public classes and functions of the Stereo UGV package. </p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a5c139e7cfac12e9270ca903f1ce2e4bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c139e7cfac12e9270ca903f1ce2e4bc">&#9670;&nbsp;</a></span>CvVideoCaptureType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacestereo__ugv.html#a5c139e7cfac12e9270ca903f1ce2e4bc">stereo_ugv::CvVideoCaptureType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Types of image sources backended by cv::VideoCapture. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5c139e7cfac12e9270ca903f1ce2e4bcaddf0d6b21537d984fea6544f58101fa8"></a>CAMERA&#160;</td><td class="fielddoc"><p>Images are taken by a camera device at real-time. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5c139e7cfac12e9270ca903f1ce2e4bcab34687a3607271050f02aa9bf90c731a"></a>IMAGES&#160;</td><td class="fielddoc"><p>Images are read from a sequence of images files with a common filename pattern. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5c139e7cfac12e9270ca903f1ce2e4bcae60ae31f67ab883c746bb71c7a145c18"></a>VIDEO&#160;</td><td class="fielddoc"><p>Images are extracted from frames of a video file. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="af45c67058883fb26e2c27945af6ab490"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af45c67058883fb26e2c27945af6ab490">&#9670;&nbsp;</a></span>findCameraCharacterDeviceFile()</h2>
 
@@ -154,8 +207,45 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (<a cl
 
 </div>
 </div>
+<a id="ac02cc03581ba53b911a9a7bd87f9a24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac02cc03581ba53b911a9a7bd87f9a24c">&#9670;&nbsp;</a></span>initialize() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html">HPS3D160FrameLayout</a> *&#160;</td>
+          <td class="paramname"><em>layout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes an <a class="el" href="classstereo__ugv_1_1HPS3D160FrameLayout.html" title="The class of frame layout for HPS-3D160 cameras. ">HPS3D160FrameLayout</a>. </p>
+<p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;imageSize&quot;</span>: &lt;cv::Size&gt;</div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layout</td><td>The layout to be initialized. </td></tr>
+    <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a6971cc11001fdf589a71f6fb3099c65b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6971cc11001fdf589a71f6fb3099c65b">&#9670;&nbsp;</a></span>initialize()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6971cc11001fdf589a71f6fb3099c65b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,6 +294,202 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aaa158ec1ee9178414843adbbb91a394b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa158ec1ee9178414843adbbb91a394b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes an std::string and performs variable substitution. </p>
+<p>The variable names embedded the original string within JSON are substituted into their corresponding values using the internal variable map. Variable names are marked by a pair of enclosing curly braces preceded by a dollar sign, e.g. "${dataFolder}/calibration". Variable substitution can be escaped by adding a backslash before either the dollar sign or the opening brace. This can be helpful for expressing file paths with environmental variables, e.g. "\${HOME}/catkin_ws". </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string to be initialized. </td></tr>
+    <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adab204dc6f43824bcda4cd5e172d2812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adab204dc6f43824bcda4cd5e172d2812">&#9670;&nbsp;</a></span>initialize() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initialize </td>
+          <td>(</td>
+          <td class="paramtype">cv::Size *&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a cv::Size. </p>
+<p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;width&quot;</span>: &lt;integer&gt;,</div><div class="line">  <span class="stringliteral">&quot;height&quot;</span>: &lt;integer&gt;</div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size to be initialized. </td></tr>
+    <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a98148c84d1f085ac51c2f2fb7c8e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a98148c84d1f085ac51c2f2fb7c8e7a">&#9670;&nbsp;</a></span>initialize() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initialize </td>
+          <td>(</td>
+          <td class="paramtype">cv::TermCriteria *&#160;</td>
+          <td class="paramname"><em>criteria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a cv::TermCriteria. </p>
+<p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;maxCount&quot;</span>: &lt;null | integer&gt;,</div><div class="line">  <span class="stringliteral">&quot;epsilon&quot;</span>: &lt;null | number&gt;</div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">criteria</td><td>The criteria to be initialized. </td></tr>
+    <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acaec0936792769b5d676773f7d4070cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaec0936792769b5d676773f7d4070cd">&#9670;&nbsp;</a></span>initialize() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;CvVideoCaptureType Type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstereo__ugv_1_1CvVideoCaptureImageSource.html">CvVideoCaptureImageSource</a>&lt; Type &gt; *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes a CvVideoCaptureImageSource&lt;Type&gt;. </p>
+<p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;frameLayout&quot;</span>: &lt;FrameLayout&gt;,</div><div class="line">  <span class="stringliteral">&quot;type&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;,</div><div class="line">  ...</div><div class="line">}</div></div><!-- fragment --><p> where ... means type-specific entries. For "camera": </p><div class="fragment"><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="stringliteral">&quot;deviceNamePrefix&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;</div><div class="line">}</div></div><!-- fragment --><p> For "images": </p><div class="fragment"><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="stringliteral">&quot;filenamePattern&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;</div><div class="line">}</div></div><!-- fragment --><p> For "video": </p><div class="fragment"><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="stringliteral">&quot;filename&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;</div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>The image source to be initialized. </td></tr>
+    <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef8f9a951e11f9d5d178db99754aac4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef8f9a951e11f9d5d178db99754aac4b">&#9670;&nbsp;</a></span>openInternalContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classstereo__ugv_1_1Context.html">Context</a> stereo_ugv::openInternalContext </td>
+          <td>(</td>
+          <td class="paramtype">nlohmann::json *&#160;</td>
+          <td class="paramname"><em>json</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Opens the internal context whose variable JSON is stored in a separate file. </p>
+<p>A separate file that stores the variable JSON should be referenced as follows: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;type&quot;</span>: <span class="stringliteral">&quot;file&quot;</span>,</div><div class="line">  <span class="stringliteral">&quot;filename&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;</div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json</td><td>The variable JSON file to be opened. It will not be assigned if no variable JSON file is referenced. </td></tr>
+    <tr><td class="paramname">context</td><td>The context on the surface. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the operation was successful, i.e. a separate file is referenced that stores the variable JSON, returns a new context created with this internal JSON. Otherwise, returns the original context passed into this function. </dd></dl>
 
 </div>
 </div>

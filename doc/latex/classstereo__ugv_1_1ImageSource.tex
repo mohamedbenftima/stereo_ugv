@@ -1,0 +1,101 @@
+\hypertarget{classstereo__ugv_1_1ImageSource}{}\section{stereo\+\_\+ugv\+:\+:Image\+Source Class Reference}
+\label{classstereo__ugv_1_1ImageSource}\index{stereo\+\_\+ugv\+::\+Image\+Source@{stereo\+\_\+ugv\+::\+Image\+Source}}
+
+
+The base class that reads a pair of images taken by a stereo camera at a time from various sources.  
+
+
+
+
+{\ttfamily \#include $<$image\+\_\+source.\+h$>$}
+
+
+
+Inheritance diagram for stereo\+\_\+ugv\+:\+:Image\+Source\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classstereo__ugv_1_1ImageSource__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual cv\+::\+Size \hyperlink{classstereo__ugv_1_1ImageSource_a30d9146abcdcef11f03685a9887b96d0}{image\+Size} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the image size. The Stereo U\+GV package assumes that images taken by two heads of a stereo camera have the same size. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classstereo__ugv_1_1ImageSource_a3d87f7b09cd8889fcbee3efb29a0c39c}{read\+Images} (cv\+::\+Mat $\ast$left, cv\+::\+Mat $\ast$right)=0
+\begin{DoxyCompactList}\small\item\em Reads a pair of images of the next frame. The Stereo U\+GV package assumes that two heads of a stereo camera are aligned horizontally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1ImageSource}{Image\+Source} $>$ \hyperlink{classstereo__ugv_1_1ImageSource_a18a1a40c3b5d51788bf4c68a4186ca31}{create} (const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\begin{DoxyCompactList}\small\item\em Creates an \hyperlink{classstereo__ugv_1_1ImageSource}{Image\+Source}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The base class that reads a pair of images taken by a stereo camera at a time from various sources. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstereo__ugv_1_1ImageSource_a18a1a40c3b5d51788bf4c68a4186ca31}\label{classstereo__ugv_1_1ImageSource_a18a1a40c3b5d51788bf4c68a4186ca31}} 
+\index{stereo\+\_\+ugv\+::\+Image\+Source@{stereo\+\_\+ugv\+::\+Image\+Source}!create@{create}}
+\index{create@{create}!stereo\+\_\+ugv\+::\+Image\+Source@{stereo\+\_\+ugv\+::\+Image\+Source}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1ImageSource}{Image\+Source} $>$ stereo\+\_\+ugv\+::\+Image\+Source\+::create (\begin{DoxyParamCaption}\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates an \hyperlink{classstereo__ugv_1_1ImageSource}{Image\+Source}. 
+
+The function determines the concrete subclass of the layout to be created by looking up the \char`\"{}type\char`\"{} key, and calls the corresponding initialization function. Currently, \char`\"{}camera\char`\"{}, \char`\"{}images\char`\"{} and \char`\"{}video\char`\"{} are supported. 
+\begin{DoxyParams}{Parameters}
+{\em context} & The context containing initialization parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique pointer to the created image source. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstereo__ugv_1_1ImageSource_a30d9146abcdcef11f03685a9887b96d0}\label{classstereo__ugv_1_1ImageSource_a30d9146abcdcef11f03685a9887b96d0}} 
+\index{stereo\+\_\+ugv\+::\+Image\+Source@{stereo\+\_\+ugv\+::\+Image\+Source}!image\+Size@{image\+Size}}
+\index{image\+Size@{image\+Size}!stereo\+\_\+ugv\+::\+Image\+Source@{stereo\+\_\+ugv\+::\+Image\+Source}}
+\subsubsection{\texorpdfstring{image\+Size()}{imageSize()}}
+{\footnotesize\ttfamily virtual cv\+::\+Size stereo\+\_\+ugv\+::\+Image\+Source\+::image\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the image size. The Stereo U\+GV package assumes that images taken by two heads of a stereo camera have the same size. 
+
+\begin{DoxyReturn}{Returns}
+The image size. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource_a84dd7dbd0ff6091d68843ca02a18e0cc}{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source$<$ Type $>$}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1ImageSource_a3d87f7b09cd8889fcbee3efb29a0c39c}\label{classstereo__ugv_1_1ImageSource_a3d87f7b09cd8889fcbee3efb29a0c39c}} 
+\index{stereo\+\_\+ugv\+::\+Image\+Source@{stereo\+\_\+ugv\+::\+Image\+Source}!read\+Images@{read\+Images}}
+\index{read\+Images@{read\+Images}!stereo\+\_\+ugv\+::\+Image\+Source@{stereo\+\_\+ugv\+::\+Image\+Source}}
+\subsubsection{\texorpdfstring{read\+Images()}{readImages()}}
+{\footnotesize\ttfamily virtual void stereo\+\_\+ugv\+::\+Image\+Source\+::read\+Images (\begin{DoxyParamCaption}\item[{cv\+::\+Mat $\ast$}]{left,  }\item[{cv\+::\+Mat $\ast$}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reads a pair of images of the next frame. The Stereo U\+GV package assumes that two heads of a stereo camera are aligned horizontally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The image taken by the left head. \\
+\hline
+{\em right} & The image taken by the right head. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource_a6636c97811bb28d59453c3865b0bda69}{stereo\+\_\+ugv\+::\+Cv\+Video\+Capture\+Image\+Source$<$ Type $>$}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{image__source_8h}{image\+\_\+source.\+h}\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/src/stereo\+\_\+ugv/image\+\_\+source.\+cpp\end{DoxyCompactItemize}

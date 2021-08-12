@@ -29,14 +29,14 @@ public:
   virtual cv::Size frameSize() const = 0;
 
   /**
-   * @brief Gets the image size. The stereo_ugv package assumes that images taken by two heads of a stereo camera have
+   * @brief Gets the image size. The Stereo UGV package assumes that images taken by two heads of a stereo camera have
    * the same size.
    * @return The image size.
    */
   virtual cv::Size imageSize() const = 0;
 
   /**
-   * @brief Extracts images from the given frame. The stereo_ugv package assumes that two heads of a stereo camera are
+   * @brief Extracts images from the given frame. The Stereo UGV package assumes that two heads of a stereo camera are
    * aligned horizontally.
    * @param frame The frame.
    * @param left The left image to be extracted.

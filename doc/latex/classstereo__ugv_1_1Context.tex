@@ -12,21 +12,16 @@ The class for initializing objects from parameters stored in J\+S\+ON files.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classstereo__ugv_1_1Context_a408832fdf3245f3d91c9ea794ebbc71c}\label{classstereo__ugv_1_1Context_a408832fdf3245f3d91c9ea794ebbc71c}} 
-{\bfseries Context} (const nlohmann\+::json $\ast$parameter\+\_\+json, const std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $\ast$variable\+\_\+map, image\+\_\+transport\+::\+Image\+Transport $\ast$image\+\_\+transport) noexcept
-\item 
-\mbox{\Hypertarget{classstereo__ugv_1_1Context_a2c89fdaa8a60d2b8d1dae87e11142f03}\label{classstereo__ugv_1_1Context_a2c89fdaa8a60d2b8d1dae87e11142f03}} 
-{\bfseries Context} (const \hyperlink{classstereo__ugv_1_1Context}{Context} \&other, const std\+::string \&key)
-\item 
-\mbox{\Hypertarget{classstereo__ugv_1_1Context_aa76ed7cb15d73cf98aa1c4d09ff0ed6b}\label{classstereo__ugv_1_1Context_aa76ed7cb15d73cf98aa1c4d09ff0ed6b}} 
-const nlohmann\+::json \& {\bfseries parameter\+J\+S\+ON} () const noexcept
-\item 
-\mbox{\Hypertarget{classstereo__ugv_1_1Context_ad2fb0b84ec60e19b0224970267240b78}\label{classstereo__ugv_1_1Context_ad2fb0b84ec60e19b0224970267240b78}} 
-const std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \& {\bfseries variable\+Map} () const noexcept
-\item 
-\mbox{\Hypertarget{classstereo__ugv_1_1Context_ae31464b51727e7980eaf5f7667000a79}\label{classstereo__ugv_1_1Context_ae31464b51727e7980eaf5f7667000a79}} 
-image\+\_\+transport\+::\+Image\+Transport \& {\bfseries image\+Transport} () const noexcept
-\item 
+\hyperlink{classstereo__ugv_1_1Context_a408832fdf3245f3d91c9ea794ebbc71c}{Context} (const nlohmann\+::json $\ast$parameter\+\_\+json, const std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $\ast$variable\+\_\+map, image\+\_\+transport\+::\+Image\+Transport $\ast$image\+\_\+transport) noexcept
+\begin{DoxyCompactList}\small\item\em Creates a context. \end{DoxyCompactList}\item 
+\hyperlink{classstereo__ugv_1_1Context_a2c89fdaa8a60d2b8d1dae87e11142f03}{Context} (const \hyperlink{classstereo__ugv_1_1Context}{Context} \&other, const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Creates a new context based on the given original context, except that the new underlying J\+S\+ON is the child of the original underlying J\+S\+ON at the given key. \end{DoxyCompactList}\item 
+const nlohmann\+::json \& \hyperlink{classstereo__ugv_1_1Context_a6b40977abc9924a49282b26e05d866aa}{parameter\+J\+S\+ON} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the J\+S\+ON object that stores parameters for object initialization. \end{DoxyCompactList}\item 
+const std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \& \hyperlink{classstereo__ugv_1_1Context_a0071b4b8bc7f1b9a5c1ce541a68334e0}{variable\+Map} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the map for performing variable substitution on strings. \end{DoxyCompactList}\item 
+image\+\_\+transport\+::\+Image\+Transport \& \hyperlink{classstereo__ugv_1_1Context_a62b2e85a2c109ff079324fe5fbf0fe92}{image\+Transport} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the image transport for creating image publishers. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\void \hyperlink{classstereo__ugv_1_1Context_a1996f3d3213ab26a3ba84a1c0cf7b62e}{get\+Parameter} (const std\+::string \&key, T $\ast$parameter) const
 \begin{DoxyCompactList}\small\item\em Initializes the parameter of the given key. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\void \hyperlink{classstereo__ugv_1_1Context_a8e7e25d1efa5c92a84830824c0effa27}{get\+Parameter} (const std\+::string \&key, T $\ast$parameter, const T \&default\+\_\+value) const
@@ -35,6 +30,45 @@ image\+\_\+transport\+::\+Image\+Transport \& {\bfseries image\+Transport} () co
 
 \subsection{Detailed Description}
 The class for initializing objects from parameters stored in J\+S\+ON files. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstereo__ugv_1_1Context_a408832fdf3245f3d91c9ea794ebbc71c}\label{classstereo__ugv_1_1Context_a408832fdf3245f3d91c9ea794ebbc71c}} 
+\index{stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}!Context@{Context}}
+\index{Context@{Context}!stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}}
+\subsubsection{\texorpdfstring{Context()}{Context()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily stereo\+\_\+ugv\+::\+Context\+::\+Context (\begin{DoxyParamCaption}\item[{const nlohmann\+::json $\ast$}]{parameter\+\_\+json,  }\item[{const std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $\ast$}]{variable\+\_\+map,  }\item[{image\+\_\+transport\+::\+Image\+Transport $\ast$}]{image\+\_\+transport }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Creates a context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter\+\_\+json} & A J\+S\+ON object that stores parameters for object initialization. \\
+\hline
+{\em variable\+\_\+map} & A key-\/value map for performing variable substitution on strings within J\+S\+ON. \\
+\hline
+{\em image\+\_\+transport} & An image transport for creating image publishers. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1Context_a2c89fdaa8a60d2b8d1dae87e11142f03}\label{classstereo__ugv_1_1Context_a2c89fdaa8a60d2b8d1dae87e11142f03}} 
+\index{stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}!Context@{Context}}
+\index{Context@{Context}!stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}}
+\subsubsection{\texorpdfstring{Context()}{Context()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily stereo\+\_\+ugv\+::\+Context\+::\+Context (\begin{DoxyParamCaption}\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{other,  }\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Creates a new context based on the given original context, except that the new underlying J\+S\+ON is the child of the original underlying J\+S\+ON at the given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The original context. \\
+\hline
+{\em key} & The key of the original underlying J\+S\+ON object. \\
+\hline
+\end{DoxyParams}
+
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classstereo__ugv_1_1Context_a1996f3d3213ab26a3ba84a1c0cf7b62e}\label{classstereo__ugv_1_1Context_a1996f3d3213ab26a3ba84a1c0cf7b62e}} 
@@ -85,8 +119,48 @@ Initializes the parameter of the given key, or assigns it with the default value
 {\em default\+\_\+value} & The default value used when the given key does not exist. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1Context_a62b2e85a2c109ff079324fe5fbf0fe92}\label{classstereo__ugv_1_1Context_a62b2e85a2c109ff079324fe5fbf0fe92}} 
+\index{stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}!image\+Transport@{image\+Transport}}
+\index{image\+Transport@{image\+Transport}!stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}}
+\subsubsection{\texorpdfstring{image\+Transport()}{imageTransport()}}
+{\footnotesize\ttfamily image\+\_\+transport\+::\+Image\+Transport \& stereo\+\_\+ugv\+::\+Context\+::image\+Transport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+Gets the image transport for creating image publishers. 
+
+\begin{DoxyReturn}{Returns}
+The image transport. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstereo__ugv_1_1Context_a6b40977abc9924a49282b26e05d866aa}\label{classstereo__ugv_1_1Context_a6b40977abc9924a49282b26e05d866aa}} 
+\index{stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}!parameter\+J\+S\+ON@{parameter\+J\+S\+ON}}
+\index{parameter\+J\+S\+ON@{parameter\+J\+S\+ON}!stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}}
+\subsubsection{\texorpdfstring{parameter\+J\+S\+O\+N()}{parameterJSON()}}
+{\footnotesize\ttfamily const nlohmann\+::json \& stereo\+\_\+ugv\+::\+Context\+::parameter\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the J\+S\+ON object that stores parameters for object initialization. 
+
+\begin{DoxyReturn}{Returns}
+The J\+S\+ON object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstereo__ugv_1_1Context_a0071b4b8bc7f1b9a5c1ce541a68334e0}\label{classstereo__ugv_1_1Context_a0071b4b8bc7f1b9a5c1ce541a68334e0}} 
+\index{stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}!variable\+Map@{variable\+Map}}
+\index{variable\+Map@{variable\+Map}!stereo\+\_\+ugv\+::\+Context@{stereo\+\_\+ugv\+::\+Context}}
+\subsubsection{\texorpdfstring{variable\+Map()}{variableMap()}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \& stereo\+\_\+ugv\+::\+Context\+::variable\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the map for performing variable substitution on strings. 
+
+\begin{DoxyReturn}{Returns}
+The map. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{context_8h}{context.\+h}\end{DoxyCompactItemize}
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{context_8h}{context.\+h}\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/src/stereo\+\_\+ugv/context.\+cpp\end{DoxyCompactItemize}
