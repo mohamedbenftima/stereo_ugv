@@ -30,6 +30,10 @@ void initializeContextArguments(const ros::NodeHandle& node_handle, nlohmann::js
   }
 
   std::ifstream stream{ parameter_file };
+  if (!stream.is_open())
+  {
+    throw RuntimeError{ fmt::format(R"(Could not open "{}")", parameter_file) };
+  }
   *parameter_json = nlohmann::json::parse(stream);
 
   variable_map->clear();
@@ -248,13 +252,23 @@ Context openInternalContext(nlohmann::json* json, const Context& context)
 
   std::string filename;
   surface_json->at("filename").get_to(filename);
-  std::ifstream stream{ substituteVariables(filename, context.variableMap()) };
+  filename = substituteVariables(filename, context.variableMap());
+  std::ifstream stream{ filename };
+  if (!stream.is_open())
+  {
+    throw RuntimeError{ fmt::format(R"(Could not open "{}")", filename) };
+  }
   *json = nlohmann::json::parse(stream);
 
   while (json->is_object() && json->at("type").get_to(type) == "file")
   {
     json->at("filename").get_to(filename);
-    stream.open(substituteVariables(filename, context.variableMap()));
+    filename = substituteVariables(filename, context.variableMap());
+    stream.open(filename);
+    if (!stream.is_open())
+    {
+      throw RuntimeError{ fmt::format(R"(Could not open "{}")", filename) };
+    }
     *json = nlohmann::json::parse(stream);
   }
 

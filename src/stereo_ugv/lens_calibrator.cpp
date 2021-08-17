@@ -27,7 +27,7 @@ std::unique_ptr<LensCalibrator> LensCalibrator::create(const Context& context)
   if (type == "chessboard")
   {
     auto source{ std::make_unique<ChessboardLensCalibrator>() };
-    initialize(source.get(), context);
+    initialize(source.get(), internal_context);
     return source;
   }
 

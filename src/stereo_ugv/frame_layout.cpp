@@ -25,7 +25,7 @@ std::unique_ptr<FrameLayout> FrameLayout::create(const Context& context)
   if (type == "HPS-3D160")
   {
     auto layout{ std::make_unique<HPS3D160FrameLayout>() };
-    initialize(layout.get(), context);
+    initialize(layout.get(), internal_context);
     return layout;
   }
 

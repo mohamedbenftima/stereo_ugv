@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  <arg name="launch_prefix" default=""/>
+  <arg name="parameter_file" default="$(find stereo_ugv)/config/calibrate.json"/>
+
+  <node pkg="stereo_ugv" type="calibrate" name="calibrate" output="screen" launch-prefix="$(arg launch_prefix)">
+    <param name="parameter_file" value="$(arg parameter_file)"/>
+  </node>
+</launch>

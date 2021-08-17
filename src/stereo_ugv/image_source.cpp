@@ -20,21 +20,21 @@ std::unique_ptr<ImageSource> ImageSource::create(const Context& context)
   if (type == "camera")
   {
     auto source{ std::make_unique<CvVideoCaptureImageSource<CvVideoCaptureType::CAMERA>>() };
-    initialize(source.get(), context);
+    initialize(source.get(), internal_context);
     return source;
   }
 
   if (type == "images")
   {
     auto source{ std::make_unique<CvVideoCaptureImageSource<CvVideoCaptureType::IMAGES>>() };
-    initialize(source.get(), context);
+    initialize(source.get(), internal_context);
     return source;
   }
 
   if (type == "video")
   {
     auto source{ std::make_unique<CvVideoCaptureImageSource<CvVideoCaptureType::VIDEO>>() };
-    initialize(source.get(), context);
+    initialize(source.get(), internal_context);
     return source;
   }
 

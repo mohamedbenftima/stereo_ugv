@@ -1,0 +1,15 @@
+{
+  "imageSource": {
+    "type": "file",
+    "filename": "${configurationFolder}/image_source/calibration.json"
+  },
+  "maxImageCount": 256,
+  "undistortionFilename": "${configurationFolder}/image_undistorter/hps3d160_full.xml",
+  "type": "chessboard",
+  "patternSize": {
+    "width": 14,
+    "height": 9
+  },
+  "releaseObject": true,
+  "marker": true
+}

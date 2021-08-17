@@ -1,0 +1,8 @@
+{
+  "frameLayout": {
+    "type": "file",
+    "filename": "${configurationFolder}/frame_layout/hps3d160_full.json"
+  },
+  "type": "images",
+  "filenamePattern": "${dataFolder}/calibration/hps3d160_full/%04d.jpg"
+}
