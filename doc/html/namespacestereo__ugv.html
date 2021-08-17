@@ -125,6 +125,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a68c69a3de2a5351d41ce848792c213f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#a68c69a3de2a5351d41ce848792c213f4">initializeContextArguments</a> (const ros::NodeHandle &amp;node_handle, nlohmann::json *parameter_json, std::unordered_map&lt; std::string, std::string &gt; *variable_map)</td></tr>
+<tr class="memdesc:a68c69a3de2a5351d41ce848792c213f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes arguments to the <a class="el" href="classstereo__ugv_1_1Context.html" title="The class for initializing objects from parameters stored in JSON files. ">Context</a> constructor from parameters of a node handle.  <a href="#a68c69a3de2a5351d41ce848792c213f4">More...</a><br /></td></tr>
+<tr class="separator:a68c69a3de2a5351d41ce848792c213f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6971cc11001fdf589a71f6fb3099c65b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6971cc11001fdf589a71f6fb3099c65b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#a6971cc11001fdf589a71f6fb3099c65b">initialize</a> (T *parameter, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
 <tr class="memdesc:a6971cc11001fdf589a71f6fb3099c65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a parameter.  <a href="#a6971cc11001fdf589a71f6fb3099c65b">More...</a><br /></td></tr>
@@ -386,45 +389,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a0a98148c84d1f085ac51c2f2fb7c8e7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a98148c84d1f085ac51c2f2fb7c8e7a">&#9670;&nbsp;</a></span>initialize() <span class="overload">[5/8]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void stereo_ugv::initialize </td>
-          <td>(</td>
-          <td class="paramtype">cv::TermCriteria *&#160;</td>
-          <td class="paramname"><em>criteria</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
-          <td class="paramname"><em>context</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes a cv::TermCriteria. </p>
-<p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;maxCount&quot;</span>: &lt;null | integer&gt;,</div><div class="line">  <span class="stringliteral">&quot;epsilon&quot;</span>: &lt;null | number&gt;</div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">criteria</td><td>The criteria to be initialized. </td></tr>
-    <tr><td class="paramname">context</td><td>The context. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="aab7c44a98ba3f61baec2e4c1c9802bee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab7c44a98ba3f61baec2e4c1c9802bee">&#9670;&nbsp;</a></span>initialize() <span class="overload">[6/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aab7c44a98ba3f61baec2e4c1c9802bee">&#9670;&nbsp;</a></span>initialize() <span class="overload">[5/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -454,6 +420,43 @@ template&lt;typename T &gt; </div>
 <p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;imageSource&quot;</span>: &lt;ImageSource&gt;,</div><div class="line">  <span class="stringliteral">&quot;maxImageCount&quot;</span>: &lt;integer&gt;,</div><div class="line">  <span class="stringliteral">&quot;undistortionFilename&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;</div><div class="line">  <span class="stringliteral">&quot;type&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;</div><div class="line">  ...</div><div class="line">}</div></div><!-- fragment --><p> where ... means type-specific entries. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">calibrator</td><td>The lens calibrator to be initialized. </td></tr>
+    <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a98148c84d1f085ac51c2f2fb7c8e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a98148c84d1f085ac51c2f2fb7c8e7a">&#9670;&nbsp;</a></span>initialize() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initialize </td>
+          <td>(</td>
+          <td class="paramtype">cv::TermCriteria *&#160;</td>
+          <td class="paramname"><em>criteria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a cv::TermCriteria. </p>
+<p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;maxCount&quot;</span>: &lt;null | integer&gt;,</div><div class="line">  <span class="stringliteral">&quot;epsilon&quot;</span>: &lt;null | number&gt;</div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">criteria</td><td>The criteria to be initialized. </td></tr>
     <tr><td class="paramname">context</td><td>The context. </td></tr>
   </table>
   </dd>
@@ -539,6 +542,50 @@ template&lt;CvVideoCaptureType Type&gt; </div>
   <table class="params">
     <tr><td class="paramname">source</td><td>The image source to be initialized. </td></tr>
     <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a68c69a3de2a5351d41ce848792c213f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68c69a3de2a5351d41ce848792c213f4">&#9670;&nbsp;</a></span>initializeContextArguments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initializeContextArguments </td>
+          <td>(</td>
+          <td class="paramtype">const ros::NodeHandle &amp;&#160;</td>
+          <td class="paramname"><em>node_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nlohmann::json *&#160;</td>
+          <td class="paramname"><em>parameter_json</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, std::string &gt; *&#160;</td>
+          <td class="paramname"><em>variable_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes arguments to the <a class="el" href="classstereo__ugv_1_1Context.html" title="The class for initializing objects from parameters stored in JSON files. ">Context</a> constructor from parameters of a node handle. </p>
+<p>Parameters for object initialization are loaded from a JSON file. The path to this file should be specified at the "parameter_file" key of the node handle's private namespace. The parameter map currently contains only a few pre-defined entries (i.e. "configurationFolder" and "dataFolder"), but it may allow being loaded from the parameter server in the future. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The node handle. </td></tr>
+    <tr><td class="paramname">parameter_json</td><td>A JSON object storing initialization parameters. See <a class="el" href="classstereo__ugv_1_1Context.html#a408832fdf3245f3d91c9ea794ebbc71c" title="Creates a context. ">Context::Context</a> for details. </td></tr>
+    <tr><td class="paramname">variable_map</td><td>A map for performing variable substitution. See <a class="el" href="classstereo__ugv_1_1Context.html#a408832fdf3245f3d91c9ea794ebbc71c" title="Creates a context. ">Context::Context</a> for details. </td></tr>
   </table>
   </dd>
 </dl>

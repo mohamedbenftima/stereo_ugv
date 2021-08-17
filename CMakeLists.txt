@@ -148,14 +148,16 @@ add_library(${PROJECT_NAME}
   src/${PROJECT_NAME}/lens_calibrator.cpp
 )
 
-target_include_directories(${PROJECT_NAME}
-  PUBLIC include ${OpenCV_INCLUDE_DIRS}
-  PRIVATE ${catkin_INCLUDE_DIRS}
+target_include_directories(${PROJECT_NAME} PUBLIC
+  include
+  ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 
-target_link_libraries(${PROJECT_NAME}
-  PUBLIC ${OpenCV_LIBRARIES} nlohmann_json::nlohmann_json
-  PRIVATE fmt::fmt
+target_link_libraries(${PROJECT_NAME} PUBLIC
+  ${OpenCV_LIBRARIES}
+  fmt::fmt
+  nlohmann_json::nlohmann_json
 )
 
 ## Add cmake target dependencies of the library
@@ -182,6 +184,23 @@ target_link_libraries(${PROJECT_NAME}
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
+
+add_executable(${PROJECT_NAME}_calibrate src/calibrate.cpp)
+
+set_target_properties(${PROJECT_NAME}_calibrate PROPERTIES
+  OUTPUT_NAME calibrate
+  PREFIX ""
+)
+
+add_dependencies(${PROJECT_NAME}_calibrate
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
+  ${catkin_EXPORTED_TARGETS}
+)
+
+target_link_libraries(${PROJECT_NAME}_calibrate
+  ${catkin_LIBRARIES}
+  ${PROJECT_NAME}
+)
 
 #############
 ## Install ##

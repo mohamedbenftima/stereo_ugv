@@ -36,6 +36,11 @@ void \hyperlink{classstereo__ugv_1_1LensCalibrator_aeeb532144b29ae7004ee14e2695d
 \mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_a770bc3091deec850b75b72d11ee9bda7}\label{classstereo__ugv_1_1LensCalibrator_a770bc3091deec850b75b72d11ee9bda7}} 
 void \hyperlink{classstereo__ugv_1_1LensCalibrator_a770bc3091deec850b75b72d11ee9bda7}{save\+Coefficients} ()
 \begin{DoxyCompactList}\small\item\em Saves the undistortion coefficients calculated by \hyperlink{classstereo__ugv_1_1LensCalibrator_aeeb532144b29ae7004ee14e2695def97}{calculate\+Coefficients()} into a Y\+A\+ML or X\+ML file whose name is specified by \hyperlink{classstereo__ugv_1_1LensCalibrator_a4debdb4b31e7b474576269cc15da15d7}{set\+Undistortion\+Filename()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator} $>$ \hyperlink{classstereo__ugv_1_1LensCalibrator_ae19b071e8cb8c015351d4717f79f9184}{create} (const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\begin{DoxyCompactList}\small\item\em Creates a \hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,6 +68,24 @@ Gets the undistortion coefficients calculated by \hyperlink{classstereo__ugv_1_1
 
 \begin{DoxyReturn}{Returns}
 The undistortion coefficients. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_ae19b071e8cb8c015351d4717f79f9184}\label{classstereo__ugv_1_1LensCalibrator_ae19b071e8cb8c015351d4717f79f9184}} 
+\index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}!create@{create}}
+\index{create@{create}!stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator} $>$ stereo\+\_\+ugv\+::\+Lens\+Calibrator\+::create (\begin{DoxyParamCaption}\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a \hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator}. 
+
+The function determines the concrete subclass of the lens calibrator to be created by looking up the \char`\"{}type\char`\"{} key, and calls the corresponding initialization function. Currently, only \char`\"{}chessboard\char`\"{} is supported. 
+\begin{DoxyParams}{Parameters}
+{\em context} & The context containing initialization parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique pointer to the created lens calibrator. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_a3edf81dfc9567904a0d1a7c3555d65bf}\label{classstereo__ugv_1_1LensCalibrator_a3edf81dfc9567904a0d1a7c3555d65bf}} 
 \index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}!create\+Object\+Points@{create\+Object\+Points}}

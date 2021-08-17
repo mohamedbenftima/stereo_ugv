@@ -11,12 +11,16 @@
 #include <opencv2/core/types.hpp>
 
 #include <image_transport/image_transport.h>
+#include <ros/node_handle.h>
 
 #include <string>
 #include <unordered_map>
 
 namespace stereo_ugv
 {
+void initializeContextArguments(const ros::NodeHandle& node_handle, nlohmann::json* parameter_json,
+                                std::unordered_map<std::string, std::string>* variable_map);
+
 /**
  * @brief The class for initializing objects from parameters stored in JSON files.
  */

@@ -3,11 +3,41 @@
 
 #include <fmt/core.h>
 
+#include <ros/package.h>
+
 #include <fstream>
 #include <stack>
 
 namespace stereo_ugv
 {
+/**
+ * @brief Initializes arguments to the Context constructor from parameters of a node handle.
+ * @details Parameters for object initialization are loaded from a JSON file. The path to this file should be specified
+ * at the "parameter_file" key of the node handle's private namespace. The parameter map currently contains only a few
+ * pre-defined entries (i.e. "configurationFolder" and "dataFolder"), but it may allow being loaded from the parameter
+ * server in the future.
+ * @param node The node handle.
+ * @param parameter_json A JSON object storing initialization parameters. See Context::Context for details.
+ * @param variable_map A map for performing variable substitution. See Context::Context for details.
+ */
+void initializeContextArguments(const ros::NodeHandle& node_handle, nlohmann::json* parameter_json,
+                                std::unordered_map<std::string, std::string>* variable_map)
+{
+  std::string parameter_file;
+  if (!node_handle.getParam("parameter_file", parameter_file))
+  {
+    throw RuntimeError{ "The parameter file is not specified" };
+  }
+
+  std::ifstream stream{ parameter_file };
+  *parameter_json = nlohmann::json::parse(stream);
+
+  variable_map->clear();
+  const auto package_path{ ros::package::getPath("stereo_ugv") };
+  variable_map->emplace("configurationFolder", package_path + "/config");
+  variable_map->emplace("dataFolder", package_path + "/data");
+}
+
 /**
  * @brief Creates a context.
  * @param parameter_json A JSON object that stores parameters for object initialization.

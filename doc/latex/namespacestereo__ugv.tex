@@ -45,6 +45,8 @@ enum \hyperlink{namespacestereo__ugv_a5c139e7cfac12e9270ca903f1ce2e4bc}{Cv\+Vide
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \hyperlink{namespacestereo__ugv_a68c69a3de2a5351d41ce848792c213f4}{initialize\+Context\+Arguments} (const ros\+::\+Node\+Handle \&node\+\_\+handle, nlohmann\+::json $\ast$parameter\+\_\+json, std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $\ast$variable\+\_\+map)
+\begin{DoxyCompactList}\small\item\em Initializes arguments to the \hyperlink{classstereo__ugv_1_1Context}{Context} constructor from parameters of a node handle. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}{initialize} (T $\ast$parameter, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
 \begin{DoxyCompactList}\small\item\em Initializes a parameter. \end{DoxyCompactList}\item 
 void \hyperlink{namespacestereo__ugv_aaa158ec1ee9178414843adbbb91a394b}{initialize} (std\+::string $\ast$string, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
@@ -206,34 +208,10 @@ The underlying J\+S\+ON object should look like\+:
 {\em context} & The context. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}\label{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}} 
-\index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
-\index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
-{\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{cv\+::\+Term\+Criteria $\ast$}]{criteria,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
-
-
-
-Initializes a cv\+::\+Term\+Criteria. 
-
-The underlying J\+S\+ON object should look like\+: 
-\begin{DoxyCode}
-\{
-  \textcolor{stringliteral}{"maxCount"}: <null | integer>,
-  \textcolor{stringliteral}{"epsilon"}: <null | number>
-\}
-\end{DoxyCode}
- 
-\begin{DoxyParams}{Parameters}
-{\em criteria} & The criteria to be initialized. \\
-\hline
-{\em context} & The context. \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{namespacestereo__ugv_aab7c44a98ba3f61baec2e4c1c9802bee}\label{namespacestereo__ugv_aab7c44a98ba3f61baec2e4c1c9802bee}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
 {\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{\hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator} $\ast$}]{calibrator,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
 
 
@@ -256,6 +234,30 @@ The underlying J\+S\+ON object should look like\+:
  where ... means type-\/specific entries. 
 \begin{DoxyParams}{Parameters}
 {\em calibrator} & The lens calibrator to be initialized. \\
+\hline
+{\em context} & The context. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}\label{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}} 
+\index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
+\index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{cv\+::\+Term\+Criteria $\ast$}]{criteria,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
+
+
+
+Initializes a cv\+::\+Term\+Criteria. 
+
+The underlying J\+S\+ON object should look like\+: 
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"maxCount"}: <null | integer>,
+  \textcolor{stringliteral}{"epsilon"}: <null | number>
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em criteria} & The criteria to be initialized. \\
 \hline
 {\em context} & The context. \\
 \hline
@@ -332,6 +334,25 @@ The underlying J\+S\+ON object should look like\+:
 {\em source} & The image source to be initialized. \\
 \hline
 {\em context} & The context. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacestereo__ugv_a68c69a3de2a5351d41ce848792c213f4}\label{namespacestereo__ugv_a68c69a3de2a5351d41ce848792c213f4}} 
+\index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize\+Context\+Arguments@{initialize\+Context\+Arguments}}
+\index{initialize\+Context\+Arguments@{initialize\+Context\+Arguments}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
+\subsubsection{\texorpdfstring{initialize\+Context\+Arguments()}{initializeContextArguments()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize\+Context\+Arguments (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{node\+\_\+handle,  }\item[{nlohmann\+::json $\ast$}]{parameter\+\_\+json,  }\item[{std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $\ast$}]{variable\+\_\+map }\end{DoxyParamCaption})}
+
+
+
+Initializes arguments to the \hyperlink{classstereo__ugv_1_1Context}{Context} constructor from parameters of a node handle. 
+
+Parameters for object initialization are loaded from a J\+S\+ON file. The path to this file should be specified at the \char`\"{}parameter\+\_\+file\char`\"{} key of the node handle\textquotesingle{}s private namespace. The parameter map currently contains only a few pre-\/defined entries (i.\+e. \char`\"{}configuration\+Folder\char`\"{} and \char`\"{}data\+Folder\char`\"{}), but it may allow being loaded from the parameter server in the future. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The node handle. \\
+\hline
+{\em parameter\+\_\+json} & A J\+S\+ON object storing initialization parameters. See \hyperlink{classstereo__ugv_1_1Context_a408832fdf3245f3d91c9ea794ebbc71c}{Context\+::\+Context} for details. \\
+\hline
+{\em variable\+\_\+map} & A map for performing variable substitution. See \hyperlink{classstereo__ugv_1_1Context_a408832fdf3245f3d91c9ea794ebbc71c}{Context\+::\+Context} for details. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespacestereo__ugv_aef8f9a951e11f9d5d178db99754aac4b}\label{namespacestereo__ugv_aef8f9a951e11f9d5d178db99754aac4b}} 

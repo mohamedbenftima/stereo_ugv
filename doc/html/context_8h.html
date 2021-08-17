@@ -78,6 +78,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;nlohmann/json.hpp&gt;</code><br />
 <code>#include &lt;opencv2/core/types.hpp&gt;</code><br />
 <code>#include &lt;image_transport/image_transport.h&gt;</code><br />
+<code>#include &lt;ros/node_handle.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -114,6 +115,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a68c69a3de2a5351d41ce848792c213f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#a68c69a3de2a5351d41ce848792c213f4">stereo_ugv::initializeContextArguments</a> (const ros::NodeHandle &amp;node_handle, nlohmann::json *parameter_json, std::unordered_map&lt; std::string, std::string &gt; *variable_map)</td></tr>
+<tr class="memdesc:a68c69a3de2a5351d41ce848792c213f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes arguments to the <a class="el" href="classstereo__ugv_1_1Context.html" title="The class for initializing objects from parameters stored in JSON files. ">Context</a> constructor from parameters of a node handle.  <a href="namespacestereo__ugv.html#a68c69a3de2a5351d41ce848792c213f4">More...</a><br /></td></tr>
+<tr class="separator:a68c69a3de2a5351d41ce848792c213f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6971cc11001fdf589a71f6fb3099c65b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6971cc11001fdf589a71f6fb3099c65b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#a6971cc11001fdf589a71f6fb3099c65b">stereo_ugv::initialize</a> (T *parameter, const Context &amp;context)</td></tr>
 <tr class="memdesc:a6971cc11001fdf589a71f6fb3099c65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a parameter.  <a href="namespacestereo__ugv.html#a6971cc11001fdf589a71f6fb3099c65b">More...</a><br /></td></tr>

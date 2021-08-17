@@ -8,6 +8,7 @@ Defines \hyperlink{classstereo__ugv_1_1Context}{stereo\+\_\+ugv\+::\+Context} an
 {\ttfamily \#include $<$nlohmann/json.\+hpp$>$}\newline
 {\ttfamily \#include $<$opencv2/core/types.\+hpp$>$}\newline
 {\ttfamily \#include $<$image\+\_\+transport/image\+\_\+transport.\+h$>$}\newline
+{\ttfamily \#include $<$ros/node\+\_\+handle.\+h$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
 Include dependency graph for context.\+h\+:
@@ -39,6 +40,8 @@ class \hyperlink{classstereo__ugv_1_1Context}{stereo\+\_\+ugv\+::\+Context}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \hyperlink{namespacestereo__ugv_a68c69a3de2a5351d41ce848792c213f4}{stereo\+\_\+ugv\+::initialize\+Context\+Arguments} (const ros\+::\+Node\+Handle \&node\+\_\+handle, nlohmann\+::json $\ast$parameter\+\_\+json, std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $\ast$variable\+\_\+map)
+\begin{DoxyCompactList}\small\item\em Initializes arguments to the \hyperlink{classstereo__ugv_1_1Context}{Context} constructor from parameters of a node handle. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}{stereo\+\_\+ugv\+::initialize} (T $\ast$parameter, const Context \&context)
 \begin{DoxyCompactList}\small\item\em Initializes a parameter. \end{DoxyCompactList}\item 
 void \hyperlink{namespacestereo__ugv_aaa158ec1ee9178414843adbbb91a394b}{stereo\+\_\+ugv\+::initialize} (std\+::string $\ast$string, const Context \&context)
