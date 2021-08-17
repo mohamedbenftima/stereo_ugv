@@ -1,3 +1,4 @@
 <map id="/home/yunhao/stereo_ugv/src/stereo_ugv/include/stereo_ugv/frame_layout.h" name="/home/yunhao/stereo_ugv/src/stereo_ugv/include/stereo_ugv/frame_layout.h">
 <area shape="rect" id="node2" href="$image__source_8h.html" title="Defines stereo_ugv::ImageSource and its subclasses. " alt="" coords="5,124,200,195"/>
+<area shape="rect" id="node3" href="$lens__calibrator_8h.html" title="Defines stereo_ugv::LensCalibrator and its subclasses. " alt="" coords="13,243,193,313"/>
 </map>

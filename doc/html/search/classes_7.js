@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['runtimeerror',['RuntimeError',['../classstereo__ugv_1_1RuntimeError.html',1,'stereo_ugv']]]
+  ['parseerror',['ParseError',['../classstereo__ugv_1_1ParseError.html',1,'stereo_ugv']]]
 ];

@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classstereo__ugv_1_1RuntimeError.html" title="The class for errors that are not due to programming errors and do not have a clear cause..." alt="" coords="5,56,193,83"/>
-<area shape="rect" id="node2" href="$classstereo__ugv_1_1Exception.html" title="The base class for exceptions. " alt="" coords="241,56,408,83"/>
-<area shape="rect" id="node3" href="$classstereo__ugv_1_1InvalidParameter.html" title="The class for errors due to unaccepted initialization parameters. " alt="" coords="456,5,671,32"/>
-<area shape="rect" id="node4" href="$classstereo__ugv_1_1OutOfFrames.html" title="The class of exception thrown when an image source is running out of frames. " alt="" coords="469,56,657,83"/>
-<area shape="rect" id="node5" href="$classstereo__ugv_1_1ParseError.html" title="The class for parse errors encountered during variable substitution on strings within JSON..." alt="" coords="479,107,648,133"/>
+<area shape="rect" id="node2" href="$classstereo__ugv_1_1Exception.html" title="The base class for exceptions. " alt="" coords="140,81,307,108"/>
+<area shape="rect" id="node3" href="$classstereo__ugv_1_1InvalidParameter.html" title="The class for errors due to unaccepted initialization parameters. " alt="" coords="355,5,569,32"/>
+<area shape="rect" id="node4" href="$classstereo__ugv_1_1OutOfFrames.html" title="The class of exception thrown when an image source is running out of frames. " alt="" coords="368,56,556,83"/>
+<area shape="rect" id="node5" href="$classstereo__ugv_1_1ParseError.html" title="The class for parse errors encountered during variable substitution on strings within JSON..." alt="" coords="377,107,547,133"/>
+<area shape="rect" id="node6" href="$classstereo__ugv_1_1RuntimeError.html" title="The class for errors that are not due to programming errors and do not have a clear cause..." alt="" coords="368,157,556,184"/>
 </map>

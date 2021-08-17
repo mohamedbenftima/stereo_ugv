@@ -74,6 +74,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1ChessboardLensCalibrator.html">ChessboardLensCalibrator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for calibrating a stereo camera using a chessboard pattern.  <a href="classstereo__ugv_1_1ChessboardLensCalibrator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1Context.html">Context</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for initializing objects from parameters stored in JSON files.  <a href="classstereo__ugv_1_1Context.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,6 +97,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1InvalidParameter.html">InvalidParameter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for errors due to unaccepted initialization parameters.  <a href="classstereo__ugv_1_1InvalidParameter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1LensCalibrator.html">LensCalibrator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for calculating and saving undistortion coefficients of a stereo camera.  <a href="classstereo__ugv_1_1LensCalibrator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstereo__ugv_1_1LensCoefficients.html">LensCoefficients</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The structure of undistortion coefficients of a stereo camera.  <a href="structstereo__ugv_1_1LensCoefficients.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1OutOfFrames.html">OutOfFrames</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class of exception thrown when an image source is running out of frames.  <a href="classstereo__ugv_1_1OutOfFrames.html#details">More...</a><br /></td></tr>
@@ -142,6 +151,12 @@ Functions</h2></td></tr>
 <tr class="memitem:acaec0936792769b5d676773f7d4070cd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#acaec0936792769b5d676773f7d4070cd">initialize</a> (<a class="el" href="classstereo__ugv_1_1CvVideoCaptureImageSource.html">CvVideoCaptureImageSource</a>&lt; Type &gt; *source, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
 <tr class="memdesc:acaec0936792769b5d676773f7d4070cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a CvVideoCaptureImageSource&lt;Type&gt;.  <a href="#acaec0936792769b5d676773f7d4070cd">More...</a><br /></td></tr>
 <tr class="separator:acaec0936792769b5d676773f7d4070cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab7c44a98ba3f61baec2e4c1c9802bee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#aab7c44a98ba3f61baec2e4c1c9802bee">initialize</a> (<a class="el" href="classstereo__ugv_1_1LensCalibrator.html">LensCalibrator</a> *calibrator, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:aab7c44a98ba3f61baec2e4c1c9802bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <a class="el" href="classstereo__ugv_1_1LensCalibrator.html" title="The base class for calculating and saving undistortion coefficients of a stereo camera. ">LensCalibrator</a>.  <a href="#aab7c44a98ba3f61baec2e4c1c9802bee">More...</a><br /></td></tr>
+<tr class="separator:aab7c44a98ba3f61baec2e4c1c9802bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8ff522fb8d2300fcdfc02ab0025e98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#a8e8ff522fb8d2300fcdfc02ab0025e98">initialize</a> (<a class="el" href="classstereo__ugv_1_1ChessboardLensCalibrator.html">ChessboardLensCalibrator</a> *calibrator, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:a8e8ff522fb8d2300fcdfc02ab0025e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <a class="el" href="classstereo__ugv_1_1ChessboardLensCalibrator.html" title="The class for calibrating a stereo camera using a chessboard pattern. ">ChessboardLensCalibrator</a>.  <a href="#a8e8ff522fb8d2300fcdfc02ab0025e98">More...</a><br /></td></tr>
+<tr class="separator:a8e8ff522fb8d2300fcdfc02ab0025e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The namespace for public classes and functions of the Stereo UGV package. </p>
@@ -208,7 +223,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac02cc03581ba53b911a9a7bd87f9a24c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac02cc03581ba53b911a9a7bd87f9a24c">&#9670;&nbsp;</a></span>initialize() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac02cc03581ba53b911a9a7bd87f9a24c">&#9670;&nbsp;</a></span>initialize() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +260,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a6971cc11001fdf589a71f6fb3099c65b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6971cc11001fdf589a71f6fb3099c65b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6971cc11001fdf589a71f6fb3099c65b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,7 +313,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="aaa158ec1ee9178414843adbbb91a394b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa158ec1ee9178414843adbbb91a394b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa158ec1ee9178414843adbbb91a394b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,7 +350,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="adab204dc6f43824bcda4cd5e172d2812"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adab204dc6f43824bcda4cd5e172d2812">&#9670;&nbsp;</a></span>initialize() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adab204dc6f43824bcda4cd5e172d2812">&#9670;&nbsp;</a></span>initialize() <span class="overload">[4/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -372,7 +387,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a0a98148c84d1f085ac51c2f2fb7c8e7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a98148c84d1f085ac51c2f2fb7c8e7a">&#9670;&nbsp;</a></span>initialize() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a98148c84d1f085ac51c2f2fb7c8e7a">&#9670;&nbsp;</a></span>initialize() <span class="overload">[5/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,8 +423,83 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="aab7c44a98ba3f61baec2e4c1c9802bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab7c44a98ba3f61baec2e4c1c9802bee">&#9670;&nbsp;</a></span>initialize() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstereo__ugv_1_1LensCalibrator.html">LensCalibrator</a> *&#160;</td>
+          <td class="paramname"><em>calibrator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a <a class="el" href="classstereo__ugv_1_1LensCalibrator.html" title="The base class for calculating and saving undistortion coefficients of a stereo camera. ">LensCalibrator</a>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Because <a class="el" href="classstereo__ugv_1_1LensCalibrator.html" title="The base class for calculating and saving undistortion coefficients of a stereo camera. ">LensCalibrator</a> is an abstract class, this function should be called in the initialization functions of the subclasses.</dd></dl>
+<p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;imageSource&quot;</span>: &lt;ImageSource&gt;,</div><div class="line">  <span class="stringliteral">&quot;maxImageCount&quot;</span>: &lt;integer&gt;,</div><div class="line">  <span class="stringliteral">&quot;undistortionFilename&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;</div><div class="line">  <span class="stringliteral">&quot;type&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;</div><div class="line">  ...</div><div class="line">}</div></div><!-- fragment --><p> where ... means type-specific entries. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">calibrator</td><td>The lens calibrator to be initialized. </td></tr>
+    <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e8ff522fb8d2300fcdfc02ab0025e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8ff522fb8d2300fcdfc02ab0025e98">&#9670;&nbsp;</a></span>initialize() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstereo__ugv_1_1ChessboardLensCalibrator.html">ChessboardLensCalibrator</a> *&#160;</td>
+          <td class="paramname"><em>calibrator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a <a class="el" href="classstereo__ugv_1_1ChessboardLensCalibrator.html" title="The class for calibrating a stereo camera using a chessboard pattern. ">ChessboardLensCalibrator</a>. </p>
+<p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  ...</div><div class="line">  patternSize: &lt;cv::Size&gt;,</div><div class="line">  squareLength: &lt;number&gt;,</div><div class="line">  releaseObject: &lt;<span class="keywordtype">boolean</span>&gt;,</div><div class="line">  marker: &lt;<span class="keywordtype">boolean</span>&gt;</div><div class="line">}</div></div><!-- fragment --><p> where ... means entries of the superclass. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">calibrator</td><td>The lens calibrator to be initialized. </td></tr>
+    <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="acaec0936792769b5d676773f7d4070cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaec0936792769b5d676773f7d4070cd">&#9670;&nbsp;</a></span>initialize() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acaec0936792769b5d676773f7d4070cd">&#9670;&nbsp;</a></span>initialize() <span class="overload">[8/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

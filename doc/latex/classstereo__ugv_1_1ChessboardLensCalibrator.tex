@@ -1,0 +1,181 @@
+\hypertarget{classstereo__ugv_1_1ChessboardLensCalibrator}{}\section{stereo\+\_\+ugv\+:\+:Chessboard\+Lens\+Calibrator Class Reference}
+\label{classstereo__ugv_1_1ChessboardLensCalibrator}\index{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}}
+
+
+The class for calibrating a stereo camera using a chessboard pattern.  
+
+
+
+
+{\ttfamily \#include $<$lens\+\_\+calibrator.\+h$>$}
+
+
+
+Inheritance diagram for stereo\+\_\+ugv\+:\+:Chessboard\+Lens\+Calibrator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classstereo__ugv_1_1ChessboardLensCalibrator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for stereo\+\_\+ugv\+:\+:Chessboard\+Lens\+Calibrator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classstereo__ugv_1_1ChessboardLensCalibrator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_aeda7a0a6538957e6174277931abf5cd4}{set\+Pattern\+Size} (cv\+::\+Size size)
+\begin{DoxyCompactList}\small\item\em Sets the size of the chessboard pattern. \end{DoxyCompactList}\item 
+void \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_a232059124de2dcb4467bd2a586c75273}{set\+Square\+Length} (float length)
+\begin{DoxyCompactList}\small\item\em Sets the square length of the chessboard pattern. \end{DoxyCompactList}\item 
+void \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_a438ea74bec4002b39dee1985cba88948}{set\+Release\+Object} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Sets whether the method of releasing object is enabled. \end{DoxyCompactList}\item 
+void \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_af2814fa1b58cdb9b2a8c3a1c46113da8}{set\+Marker} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Sets whether the chessboard pattern has markers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_ac6e93519a72d4218bcb1f9a49a9c22eb}{detect\+Image\+Points} (const cv\+::\+Mat \&image, std\+::vector$<$ cv\+::\+Point2f $>$ $\ast$points) const override
+\begin{DoxyCompactList}\small\item\em Detects feature points in the given image. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ cv\+::\+Point3f $>$ \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_adaeaa9e0a3203872ea8e5ef5b3482f7e}{create\+Object\+Points} () const override
+\begin{DoxyCompactList}\small\item\em Creates the 3D points corresponding to the detected 2D points in images. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_a00aa88f3399b59ec686f6d506c73a910}{index\+Of\+Fixed\+Point} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Gets the index of the fixed point if the method of releasing object is used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class for calibrating a stereo camera using a chessboard pattern. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstereo__ugv_1_1ChessboardLensCalibrator_adaeaa9e0a3203872ea8e5ef5b3482f7e}\label{classstereo__ugv_1_1ChessboardLensCalibrator_adaeaa9e0a3203872ea8e5ef5b3482f7e}} 
+\index{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}!create\+Object\+Points@{create\+Object\+Points}}
+\index{create\+Object\+Points@{create\+Object\+Points}!stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{create\+Object\+Points()}{createObjectPoints()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Point3f $>$ stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator\+::create\+Object\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates the 3D points corresponding to the detected 2D points in images. 
+
+\begin{DoxyReturn}{Returns}
+A vector of 3D points. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classstereo__ugv_1_1LensCalibrator_a3edf81dfc9567904a0d1a7c3555d65bf}{stereo\+\_\+ugv\+::\+Lens\+Calibrator}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1ChessboardLensCalibrator_ac6e93519a72d4218bcb1f9a49a9c22eb}\label{classstereo__ugv_1_1ChessboardLensCalibrator_ac6e93519a72d4218bcb1f9a49a9c22eb}} 
+\index{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}!detect\+Image\+Points@{detect\+Image\+Points}}
+\index{detect\+Image\+Points@{detect\+Image\+Points}!stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{detect\+Image\+Points()}{detectImagePoints()}}
+{\footnotesize\ttfamily bool stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator\+::detect\+Image\+Points (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$ $\ast$}]{points }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Detects feature points in the given image. 
+
+The number of detected points must be constant, and these 2D points should corresponds to fixed points on a roughly planar rigid body in 3D space. 
+\begin{DoxyParams}{Parameters}
+{\em image} & The image. \\
+\hline
+{\em points} & The feature points to be detected. It will not be assigned if no feature points were detected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether feature points are detected. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classstereo__ugv_1_1LensCalibrator_a9be834b0ef2983af47ac5f9dd67887fe}{stereo\+\_\+ugv\+::\+Lens\+Calibrator}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1ChessboardLensCalibrator_a00aa88f3399b59ec686f6d506c73a910}\label{classstereo__ugv_1_1ChessboardLensCalibrator_a00aa88f3399b59ec686f6d506c73a910}} 
+\index{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}!index\+Of\+Fixed\+Point@{index\+Of\+Fixed\+Point}}
+\index{index\+Of\+Fixed\+Point@{index\+Of\+Fixed\+Point}!stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{index\+Of\+Fixed\+Point()}{indexOfFixedPoint()}}
+{\footnotesize\ttfamily int stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator\+::index\+Of\+Fixed\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the index of the fixed point if the method of releasing object is used. 
+
+\begin{DoxyReturn}{Returns}
+If the traditional calibration method is used, returns 0. Otherwise if the method of releasing object is used, return the index of the fixed point which is between 1 and number\+\_\+of\+\_\+points -\/ 1. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classstereo__ugv_1_1LensCalibrator_ad25267d7b60a912f270701359eda1c54}{stereo\+\_\+ugv\+::\+Lens\+Calibrator}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1ChessboardLensCalibrator_af2814fa1b58cdb9b2a8c3a1c46113da8}\label{classstereo__ugv_1_1ChessboardLensCalibrator_af2814fa1b58cdb9b2a8c3a1c46113da8}} 
+\index{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}!set\+Marker@{set\+Marker}}
+\index{set\+Marker@{set\+Marker}!stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{set\+Marker()}{setMarker()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator\+::set\+Marker (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Sets whether the chessboard pattern has markers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & Whether the chessboard pattern has markers. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1ChessboardLensCalibrator_aeda7a0a6538957e6174277931abf5cd4}\label{classstereo__ugv_1_1ChessboardLensCalibrator_aeda7a0a6538957e6174277931abf5cd4}} 
+\index{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}!set\+Pattern\+Size@{set\+Pattern\+Size}}
+\index{set\+Pattern\+Size@{set\+Pattern\+Size}!stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{set\+Pattern\+Size()}{setPatternSize()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator\+::set\+Pattern\+Size (\begin{DoxyParamCaption}\item[{cv\+::\+Size}]{size }\end{DoxyParamCaption})}
+
+
+
+Sets the size of the chessboard pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The pattern size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1ChessboardLensCalibrator_a438ea74bec4002b39dee1985cba88948}\label{classstereo__ugv_1_1ChessboardLensCalibrator_a438ea74bec4002b39dee1985cba88948}} 
+\index{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}!set\+Release\+Object@{set\+Release\+Object}}
+\index{set\+Release\+Object@{set\+Release\+Object}!stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{set\+Release\+Object()}{setReleaseObject()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator\+::set\+Release\+Object (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Sets whether the method of releasing object is enabled. 
+
+If the method of releasing object is enabled, the last point of the first row will be chosen as the third fixed point in cv\+::calibrate\+Camera\+R\+O(). 
+\begin{DoxyParams}{Parameters}
+{\em enabled} & Whether the method of releasing object is enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1ChessboardLensCalibrator_a232059124de2dcb4467bd2a586c75273}\label{classstereo__ugv_1_1ChessboardLensCalibrator_a232059124de2dcb4467bd2a586c75273}} 
+\index{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}!set\+Square\+Length@{set\+Square\+Length}}
+\index{set\+Square\+Length@{set\+Square\+Length}!stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{set\+Square\+Length()}{setSquareLength()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator\+::set\+Square\+Length (\begin{DoxyParamCaption}\item[{float}]{length }\end{DoxyParamCaption})}
+
+
+
+Sets the square length of the chessboard pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The square length. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{lens__calibrator_8h}{lens\+\_\+calibrator.\+h}\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/src/stereo\+\_\+ugv/lens\+\_\+calibrator.\+cpp\end{DoxyCompactItemize}

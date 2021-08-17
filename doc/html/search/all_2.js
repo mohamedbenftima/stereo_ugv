@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['findcameracharacterdevicefile',['findCameraCharacterDeviceFile',['../namespacestereo__ugv.html#af45c67058883fb26e2c27945af6ab490',1,'stereo_ugv']]],
-  ['frame_5flayout_2eh',['frame_layout.h',['../frame__layout_8h.html',1,'']]],
-  ['framelayout',['FrameLayout',['../classstereo__ugv_1_1FrameLayout.html',1,'stereo_ugv']]],
-  ['framesize',['frameSize',['../classstereo__ugv_1_1FrameLayout.html#a59da4ac9d0cc6a43cccbf8666849bdc2',1,'stereo_ugv::FrameLayout::frameSize()'],['../classstereo__ugv_1_1HPS3D160FrameLayout.html#add697132a4d32b0f1fc49f35f3b8fa0f',1,'stereo_ugv::HPS3D160FrameLayout::frameSize()']]]
+  ['exception',['Exception',['../classstereo__ugv_1_1Exception.html',1,'stereo_ugv::Exception'],['../classstereo__ugv_1_1Exception.html#a70f09c97d92872832efce71bd37aabce',1,'stereo_ugv::Exception::Exception(const char *message)'],['../classstereo__ugv_1_1Exception.html#a8d813f3fb347af4b3682c2a4bc22d59b',1,'stereo_ugv::Exception::Exception(const std::string &amp;message)']]],
+  ['exception_2eh',['exception.h',['../exception_8h.html',1,'']]],
+  ['extractimages',['extractImages',['../classstereo__ugv_1_1FrameLayout.html#af5ab49a35cfbb59a79863720e7985d29',1,'stereo_ugv::FrameLayout::extractImages()'],['../classstereo__ugv_1_1HPS3D160FrameLayout.html#a224d3fddea38c0c564baa8d391a396fa',1,'stereo_ugv::HPS3D160FrameLayout::extractImages()']]]
 ];

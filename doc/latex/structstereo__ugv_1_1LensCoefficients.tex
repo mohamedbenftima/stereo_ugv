@@ -1,0 +1,46 @@
+\hypertarget{structstereo__ugv_1_1LensCoefficients}{}\section{stereo\+\_\+ugv\+:\+:Lens\+Coefficients Struct Reference}
+\label{structstereo__ugv_1_1LensCoefficients}\index{stereo\+\_\+ugv\+::\+Lens\+Coefficients@{stereo\+\_\+ugv\+::\+Lens\+Coefficients}}
+
+
+The structure of undistortion coefficients of a stereo camera.  
+
+
+
+
+{\ttfamily \#include $<$lens\+\_\+calibrator.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structstereo__ugv_1_1LensCoefficients_a5508e7d6d3dc52cbe79451ab65673e2e}\label{structstereo__ugv_1_1LensCoefficients_a5508e7d6d3dc52cbe79451ab65673e2e}} 
+cv\+::\+Mat \hyperlink{structstereo__ugv_1_1LensCoefficients_a5508e7d6d3dc52cbe79451ab65673e2e}{camera\+\_\+matrices} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em 3x3 camera matrices of the left and the right heads, respectively. \end{DoxyCompactList}\item 
+cv\+::\+Mat \hyperlink{structstereo__ugv_1_1LensCoefficients_a5fcc432a6c105509aaea4fe293a3352d}{distortion\+\_\+coefficients} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em 5x1 distortion coefficients of the left and the right heads, respectively. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structstereo__ugv_1_1LensCoefficients_a659e8f3117f5dedea0fb74a4d6065f27}\label{structstereo__ugv_1_1LensCoefficients_a659e8f3117f5dedea0fb74a4d6065f27}} 
+cv\+::\+Mat \hyperlink{structstereo__ugv_1_1LensCoefficients_a659e8f3117f5dedea0fb74a4d6065f27}{rotation\+\_\+matrix}
+\begin{DoxyCompactList}\small\item\em The rotation matrix from the left head to the right head. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structstereo__ugv_1_1LensCoefficients_a60ab9feaa811aa39f62da750dd76f239}\label{structstereo__ugv_1_1LensCoefficients_a60ab9feaa811aa39f62da750dd76f239}} 
+cv\+::\+Mat \hyperlink{structstereo__ugv_1_1LensCoefficients_a60ab9feaa811aa39f62da750dd76f239}{translation\+\_\+vector}
+\begin{DoxyCompactList}\small\item\em The translation vector from the left head to the right head. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The structure of undistortion coefficients of a stereo camera. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structstereo__ugv_1_1LensCoefficients_a5fcc432a6c105509aaea4fe293a3352d}\label{structstereo__ugv_1_1LensCoefficients_a5fcc432a6c105509aaea4fe293a3352d}} 
+\index{stereo\+\_\+ugv\+::\+Lens\+Coefficients@{stereo\+\_\+ugv\+::\+Lens\+Coefficients}!distortion\+\_\+coefficients@{distortion\+\_\+coefficients}}
+\index{distortion\+\_\+coefficients@{distortion\+\_\+coefficients}!stereo\+\_\+ugv\+::\+Lens\+Coefficients@{stereo\+\_\+ugv\+::\+Lens\+Coefficients}}
+\subsubsection{\texorpdfstring{distortion\+\_\+coefficients}{distortion\_coefficients}}
+{\footnotesize\ttfamily cv\+::\+Mat stereo\+\_\+ugv\+::\+Lens\+Coefficients\+::distortion\+\_\+coefficients\mbox{[}2\mbox{]}}
+
+
+
+5x1 distortion coefficients of the left and the right heads, respectively. 
+
+The coefficients are ordered as (k1, k2, p1, p2, k3), where k describes radial distortions, and p describes tangential distortions. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{lens__calibrator_8h}{lens\+\_\+calibrator.\+h}\end{DoxyCompactItemize}

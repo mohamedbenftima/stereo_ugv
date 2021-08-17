@@ -25,7 +25,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 find_package(OpenCV 4 REQUIRED COMPONENTS
+  calib3d
   core
+  videoio
 )
 
 add_subdirectory(libs/fmt EXCLUDE_FROM_ALL)
@@ -143,6 +145,7 @@ add_library(${PROJECT_NAME}
   src/${PROJECT_NAME}/exception.cpp
   src/${PROJECT_NAME}/frame_layout.cpp
   src/${PROJECT_NAME}/image_source.cpp
+  src/${PROJECT_NAME}/lens_calibrator.cpp
 )
 
 target_include_directories(${PROJECT_NAME}

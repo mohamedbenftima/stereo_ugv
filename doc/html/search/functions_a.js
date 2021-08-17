@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what',['what',['../classstereo__ugv_1_1Exception.html#a6222ba0a0cd622e7b560f8dcadf2ec87',1,'stereo_ugv::Exception']]]
+  ['variablemap',['variableMap',['../classstereo__ugv_1_1Context.html#a0071b4b8bc7f1b9a5c1ce541a68334e0',1,'stereo_ugv::Context']]]
 ];

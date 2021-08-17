@@ -1,0 +1,175 @@
+\hypertarget{classstereo__ugv_1_1LensCalibrator}{}\section{stereo\+\_\+ugv\+:\+:Lens\+Calibrator Class Reference}
+\label{classstereo__ugv_1_1LensCalibrator}\index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}}
+
+
+The base class for calculating and saving undistortion coefficients of a stereo camera.  
+
+
+
+
+{\ttfamily \#include $<$lens\+\_\+calibrator.\+h$>$}
+
+
+
+Inheritance diagram for stereo\+\_\+ugv\+:\+:Lens\+Calibrator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classstereo__ugv_1_1LensCalibrator__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structstereo__ugv_1_1LensCoefficients}{Lens\+Coefficients} \& \hyperlink{classstereo__ugv_1_1LensCalibrator_a570522d1aa54e4ec153b47f6b86063e2}{coefficients} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the undistortion coefficients calculated by \hyperlink{classstereo__ugv_1_1LensCalibrator_aeeb532144b29ae7004ee14e2695def97}{calculate\+Coefficients()}. \end{DoxyCompactList}\item 
+void \hyperlink{classstereo__ugv_1_1LensCalibrator_a13c279f4c0a4cc7b815340e31d5447be}{set\+Image\+Source} (std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1ImageSource}{Image\+Source} $>$ \&\&source)
+\begin{DoxyCompactList}\small\item\em Sets the image source. \end{DoxyCompactList}\item 
+void \hyperlink{classstereo__ugv_1_1LensCalibrator_a8171c3a541429bd25ed64eb5140bbf2c}{set\+Max\+Image\+Count} (std\+::size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Sets the maximum number of image pairs used for calibration. \end{DoxyCompactList}\item 
+void \hyperlink{classstereo__ugv_1_1LensCalibrator_a4debdb4b31e7b474576269cc15da15d7}{set\+Undistortion\+Filename} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em The filename to which the calculated undistortion coefficients are written. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_aeeb532144b29ae7004ee14e2695def97}\label{classstereo__ugv_1_1LensCalibrator_aeeb532144b29ae7004ee14e2695def97}} 
+void \hyperlink{classstereo__ugv_1_1LensCalibrator_aeeb532144b29ae7004ee14e2695def97}{calculate\+Coefficients} ()
+\begin{DoxyCompactList}\small\item\em Calculates the undistortion coefficients of the stereo camera and stores them in the internal \hyperlink{structstereo__ugv_1_1LensCoefficients}{Lens\+Coefficients}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_a770bc3091deec850b75b72d11ee9bda7}\label{classstereo__ugv_1_1LensCalibrator_a770bc3091deec850b75b72d11ee9bda7}} 
+void \hyperlink{classstereo__ugv_1_1LensCalibrator_a770bc3091deec850b75b72d11ee9bda7}{save\+Coefficients} ()
+\begin{DoxyCompactList}\small\item\em Saves the undistortion coefficients calculated by \hyperlink{classstereo__ugv_1_1LensCalibrator_aeeb532144b29ae7004ee14e2695def97}{calculate\+Coefficients()} into a Y\+A\+ML or X\+ML file whose name is specified by \hyperlink{classstereo__ugv_1_1LensCalibrator_a4debdb4b31e7b474576269cc15da15d7}{set\+Undistortion\+Filename()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classstereo__ugv_1_1LensCalibrator_a9be834b0ef2983af47ac5f9dd67887fe}{detect\+Image\+Points} (const cv\+::\+Mat \&image, std\+::vector$<$ cv\+::\+Point2f $>$ $\ast$points) const =0
+\begin{DoxyCompactList}\small\item\em Detects feature points in the given image. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ cv\+::\+Point3f $>$ \hyperlink{classstereo__ugv_1_1LensCalibrator_a3edf81dfc9567904a0d1a7c3555d65bf}{create\+Object\+Points} () const =0
+\begin{DoxyCompactList}\small\item\em Creates the 3D points corresponding to the detected 2D points in images. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classstereo__ugv_1_1LensCalibrator_ad25267d7b60a912f270701359eda1c54}{index\+Of\+Fixed\+Point} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the index of the fixed point if the method of releasing object is used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The base class for calculating and saving undistortion coefficients of a stereo camera. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_a570522d1aa54e4ec153b47f6b86063e2}\label{classstereo__ugv_1_1LensCalibrator_a570522d1aa54e4ec153b47f6b86063e2}} 
+\index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}!coefficients@{coefficients}}
+\index{coefficients@{coefficients}!stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{coefficients()}{coefficients()}}
+{\footnotesize\ttfamily const \hyperlink{structstereo__ugv_1_1LensCoefficients}{Lens\+Coefficients} \& stereo\+\_\+ugv\+::\+Lens\+Calibrator\+::coefficients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the undistortion coefficients calculated by \hyperlink{classstereo__ugv_1_1LensCalibrator_aeeb532144b29ae7004ee14e2695def97}{calculate\+Coefficients()}. 
+
+\begin{DoxyReturn}{Returns}
+The undistortion coefficients. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_a3edf81dfc9567904a0d1a7c3555d65bf}\label{classstereo__ugv_1_1LensCalibrator_a3edf81dfc9567904a0d1a7c3555d65bf}} 
+\index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}!create\+Object\+Points@{create\+Object\+Points}}
+\index{create\+Object\+Points@{create\+Object\+Points}!stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{create\+Object\+Points()}{createObjectPoints()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$cv\+::\+Point3f$>$ stereo\+\_\+ugv\+::\+Lens\+Calibrator\+::create\+Object\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Creates the 3D points corresponding to the detected 2D points in images. 
+
+\begin{DoxyReturn}{Returns}
+A vector of 3D points. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_adaeaa9e0a3203872ea8e5ef5b3482f7e}{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_a9be834b0ef2983af47ac5f9dd67887fe}\label{classstereo__ugv_1_1LensCalibrator_a9be834b0ef2983af47ac5f9dd67887fe}} 
+\index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}!detect\+Image\+Points@{detect\+Image\+Points}}
+\index{detect\+Image\+Points@{detect\+Image\+Points}!stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{detect\+Image\+Points()}{detectImagePoints()}}
+{\footnotesize\ttfamily virtual bool stereo\+\_\+ugv\+::\+Lens\+Calibrator\+::detect\+Image\+Points (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$ $\ast$}]{points }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Detects feature points in the given image. 
+
+The number of detected points must be constant, and these 2D points should corresponds to fixed points on a roughly planar rigid body in 3D space. 
+\begin{DoxyParams}{Parameters}
+{\em image} & The image. \\
+\hline
+{\em points} & The feature points to be detected. It will not be assigned if no feature points were detected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether feature points are detected. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_ac6e93519a72d4218bcb1f9a49a9c22eb}{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_ad25267d7b60a912f270701359eda1c54}\label{classstereo__ugv_1_1LensCalibrator_ad25267d7b60a912f270701359eda1c54}} 
+\index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}!index\+Of\+Fixed\+Point@{index\+Of\+Fixed\+Point}}
+\index{index\+Of\+Fixed\+Point@{index\+Of\+Fixed\+Point}!stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{index\+Of\+Fixed\+Point()}{indexOfFixedPoint()}}
+{\footnotesize\ttfamily virtual int stereo\+\_\+ugv\+::\+Lens\+Calibrator\+::index\+Of\+Fixed\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Gets the index of the fixed point if the method of releasing object is used. 
+
+\begin{DoxyReturn}{Returns}
+If the traditional calibration method is used, returns 0. Otherwise if the method of releasing object is used, return the index of the fixed point which is between 1 and number\+\_\+of\+\_\+points -\/ 1. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator_a00aa88f3399b59ec686f6d506c73a910}{stereo\+\_\+ugv\+::\+Chessboard\+Lens\+Calibrator}.
+
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_a13c279f4c0a4cc7b815340e31d5447be}\label{classstereo__ugv_1_1LensCalibrator_a13c279f4c0a4cc7b815340e31d5447be}} 
+\index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}!set\+Image\+Source@{set\+Image\+Source}}
+\index{set\+Image\+Source@{set\+Image\+Source}!stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{set\+Image\+Source()}{setImageSource()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Lens\+Calibrator\+::set\+Image\+Source (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1ImageSource}{Image\+Source} $>$ \&\&}]{source }\end{DoxyParamCaption})}
+
+
+
+Sets the image source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The image source. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_a8171c3a541429bd25ed64eb5140bbf2c}\label{classstereo__ugv_1_1LensCalibrator_a8171c3a541429bd25ed64eb5140bbf2c}} 
+\index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}!set\+Max\+Image\+Count@{set\+Max\+Image\+Count}}
+\index{set\+Max\+Image\+Count@{set\+Max\+Image\+Count}!stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{set\+Max\+Image\+Count()}{setMaxImageCount()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Lens\+Calibrator\+::set\+Max\+Image\+Count (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Sets the maximum number of image pairs used for calibration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & The maximum number of frames in which images taken by both heads have detected feature points. The calibrator will stop reading more images after reaching this limit. A zero value means there is no such limit. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1LensCalibrator_a4debdb4b31e7b474576269cc15da15d7}\label{classstereo__ugv_1_1LensCalibrator_a4debdb4b31e7b474576269cc15da15d7}} 
+\index{stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}!set\+Undistortion\+Filename@{set\+Undistortion\+Filename}}
+\index{set\+Undistortion\+Filename@{set\+Undistortion\+Filename}!stereo\+\_\+ugv\+::\+Lens\+Calibrator@{stereo\+\_\+ugv\+::\+Lens\+Calibrator}}
+\subsubsection{\texorpdfstring{set\+Undistortion\+Filename()}{setUndistortionFilename()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Lens\+Calibrator\+::set\+Undistortion\+Filename (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+The filename to which the calculated undistortion coefficients are written. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the undistortion file. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{lens__calibrator_8h}{lens\+\_\+calibrator.\+h}\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/src/stereo\+\_\+ugv/lens\+\_\+calibrator.\+cpp\end{DoxyCompactItemize}
