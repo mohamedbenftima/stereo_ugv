@@ -10,6 +10,31 @@
 namespace stereo_ugv
 {
 /**
+ * @brief Creates a LensCalibrator.
+ * @details The function determines the concrete subclass of the lens calibrator to be created by looking up the "type"
+ * key, and calls the corresponding initialization function. Currently, only "chessboard" is supported.
+ * @param context The context containing initialization parameters.
+ * @return A unique pointer to the created lens calibrator.
+ */
+std::unique_ptr<LensCalibrator> LensCalibrator::create(const Context& context)
+{
+  nlohmann::json internal_json;
+  const auto internal_context{ openInternalContext(&internal_json, context) };
+
+  std::string type;
+  internal_context.getParameter("type", &type);
+
+  if (type == "chessboard")
+  {
+    auto source{ std::make_unique<ChessboardLensCalibrator>() };
+    initialize(source.get(), context);
+    return source;
+  }
+
+  throw InvalidParameter{ fmt::format(R"(Unknown LensCalibrator type "{}")", type) };
+}
+
+/**
  * @brief Gets the undistortion coefficients calculated by calculateCoefficients().
  * @return The undistortion coefficients.
  */

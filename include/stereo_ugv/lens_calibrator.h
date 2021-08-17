@@ -47,6 +47,8 @@ struct LensCoefficients
 class LensCalibrator
 {
 public:
+  static std::unique_ptr<LensCalibrator> create(const Context& context);
+
   const LensCoefficients& coefficients() const noexcept;
 
   void setImageSource(std::unique_ptr<ImageSource>&& source);
