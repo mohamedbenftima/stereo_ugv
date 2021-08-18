@@ -150,15 +150,11 @@ void LensCalibrator::saveCoefficients()
     throw RuntimeError{ fmt::format(R"(Could not write to undistortion file "{}")", undistortion_filename_) };
   }
 
-  storage << "camera_matrix"
-          << "left" << coefficients_.camera_matrices[0];
-  storage << "camera_matrix"
-          << "right" << coefficients_.camera_matrices[1];
+  storage << "camera_matrix_left" << coefficients_.camera_matrices[0];
+  storage << "camera_matrix_right" << coefficients_.camera_matrices[1];
 
-  storage << "distortion_coefficients"
-          << "left" << coefficients_.distortion_coefficients[0];
-  storage << "distortion_coefficients"
-          << "right" << coefficients_.distortion_coefficients[1];
+  storage << "distortion_coefficients_left" << coefficients_.distortion_coefficients[0];
+  storage << "distortion_coefficients_right" << coefficients_.distortion_coefficients[1];
 
   storage << "rotation_matrix" << coefficients_.rotation_matrix;
   storage << "translation_vector" << coefficients_.translation_vector;
