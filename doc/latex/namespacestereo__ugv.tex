@@ -22,6 +22,8 @@ class \hyperlink{classstereo__ugv_1_1HPS3D160FrameLayout}{H\+P\+S3\+D160\+Frame\
 \begin{DoxyCompactList}\small\item\em The class of frame layout for H\+P\+S-\/3\+D160 cameras. \end{DoxyCompactList}\item 
 class \hyperlink{classstereo__ugv_1_1ImageSource}{Image\+Source}
 \begin{DoxyCompactList}\small\item\em The base class that reads a pair of images taken by a stereo camera at a time from various sources. \end{DoxyCompactList}\item 
+class \hyperlink{classstereo__ugv_1_1ImageUndistorter}{Image\+Undistorter}
+\begin{DoxyCompactList}\small\item\em The class for undistorting images taken by a stereo camera such that they are ready for disparity estimation. \end{DoxyCompactList}\item 
 class \hyperlink{classstereo__ugv_1_1InvalidParameter}{Invalid\+Parameter}
 \begin{DoxyCompactList}\small\item\em The class for errors due to unaccepted initialization parameters. \end{DoxyCompactList}\item 
 class \hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator}
@@ -63,6 +65,8 @@ std\+::string \hyperlink{namespacestereo__ugv_af45c67058883fb26e2c27945af6ab490}
 \begin{DoxyCompactList}\small\item\em Finds the character device file of a camera device given the prefix of its device name. \end{DoxyCompactList}\item 
 {\footnotesize template$<$Cv\+Video\+Capture\+Type Type$>$ }\\void \hyperlink{namespacestereo__ugv_acaec0936792769b5d676773f7d4070cd}{initialize} (\hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource}{Cv\+Video\+Capture\+Image\+Source}$<$ Type $>$ $\ast$source, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
 \begin{DoxyCompactList}\small\item\em Initializes a Cv\+Video\+Capture\+Image\+Source$<$\+Type$>$. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestereo__ugv_ab607b745fcce81036bd29780d14513e5}{initialize} (\hyperlink{classstereo__ugv_1_1ImageUndistorter}{Image\+Undistorter} $\ast$undistorter, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
+\begin{DoxyCompactList}\small\item\em Initializes an \hyperlink{classstereo__ugv_1_1ImageUndistorter}{Image\+Undistorter}. \end{DoxyCompactList}\item 
 void \hyperlink{namespacestereo__ugv_aab7c44a98ba3f61baec2e4c1c9802bee}{initialize} (\hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator} $\ast$calibrator, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
 \begin{DoxyCompactList}\small\item\em Initializes a \hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator}. \end{DoxyCompactList}\item 
 void \hyperlink{namespacestereo__ugv_a8e8ff522fb8d2300fcdfc02ab0025e98}{initialize} (\hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator}{Chessboard\+Lens\+Calibrator} $\ast$calibrator, const \hyperlink{classstereo__ugv_1_1Context}{Context} \&context)
@@ -121,10 +125,35 @@ This function has not been implemented, and calling it will always cause a \hype
 \begin{DoxyReturn}{Returns}
 The full path to the character device file. If multiple matching cameras are detected, the function issues a warning and returns any one among them. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{namespacestereo__ugv_ab607b745fcce81036bd29780d14513e5}\label{namespacestereo__ugv_ab607b745fcce81036bd29780d14513e5}} 
+\index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
+\index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{\hyperlink{classstereo__ugv_1_1ImageUndistorter}{Image\+Undistorter} $\ast$}]{undistorter,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
+
+
+
+Initializes an \hyperlink{classstereo__ugv_1_1ImageUndistorter}{Image\+Undistorter}. 
+
+The underlying J\+S\+ON object should look like\+: 
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"imageSource"}: <ImageSource>,
+  \textcolor{stringliteral}{"undistortionFile"}: <\textcolor{keywordtype}{string}>,
+  \textcolor{stringliteral}{"newImageSize"}: <cv::Size>
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em undistorter} & The image undistorter to be initialized. \\
+\hline
+{\em context} & The context. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{namespacestereo__ugv_ac02cc03581ba53b911a9a7bd87f9a24c}\label{namespacestereo__ugv_ac02cc03581ba53b911a9a7bd87f9a24c}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
 {\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{\hyperlink{classstereo__ugv_1_1HPS3D160FrameLayout}{H\+P\+S3\+D160\+Frame\+Layout} $\ast$}]{layout,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
 
 
@@ -147,7 +176,7 @@ The underlying J\+S\+ON object should look like\+:
 \mbox{\Hypertarget{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}\label{namespacestereo__ugv_a6971cc11001fdf589a71f6fb3099c65b}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{T $\ast$}]{parameter,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -170,7 +199,7 @@ Initializes a parameter.
 \mbox{\Hypertarget{namespacestereo__ugv_aaa158ec1ee9178414843adbbb91a394b}\label{namespacestereo__ugv_aaa158ec1ee9178414843adbbb91a394b}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
 {\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{string,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
 
 
@@ -187,7 +216,7 @@ The variable names embedded the original string within J\+S\+ON are substituted 
 \mbox{\Hypertarget{namespacestereo__ugv_adab204dc6f43824bcda4cd5e172d2812}\label{namespacestereo__ugv_adab204dc6f43824bcda4cd5e172d2812}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
 {\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{cv\+::\+Size $\ast$}]{size,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
 
 
@@ -211,7 +240,7 @@ The underlying J\+S\+ON object should look like\+:
 \mbox{\Hypertarget{namespacestereo__ugv_aab7c44a98ba3f61baec2e4c1c9802bee}\label{namespacestereo__ugv_aab7c44a98ba3f61baec2e4c1c9802bee}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
 {\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{\hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator} $\ast$}]{calibrator,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
 
 
@@ -241,7 +270,7 @@ The underlying J\+S\+ON object should look like\+:
 \mbox{\Hypertarget{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}\label{namespacestereo__ugv_a0a98148c84d1f085ac51c2f2fb7c8e7a}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
 {\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{cv\+::\+Term\+Criteria $\ast$}]{criteria,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
 
 
@@ -265,7 +294,7 @@ The underlying J\+S\+ON object should look like\+:
 \mbox{\Hypertarget{namespacestereo__ugv_a8e8ff522fb8d2300fcdfc02ab0025e98}\label{namespacestereo__ugv_a8e8ff522fb8d2300fcdfc02ab0025e98}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
 {\footnotesize\ttfamily void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{\hyperlink{classstereo__ugv_1_1ChessboardLensCalibrator}{Chessboard\+Lens\+Calibrator} $\ast$}]{calibrator,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})}
 
 
@@ -292,7 +321,7 @@ The underlying J\+S\+ON object should look like\+:
 \mbox{\Hypertarget{namespacestereo__ugv_acaec0936792769b5d676773f7d4070cd}\label{namespacestereo__ugv_acaec0936792769b5d676773f7d4070cd}} 
 \index{stereo\+\_\+ugv@{stereo\+\_\+ugv}!initialize@{initialize}}
 \index{initialize@{initialize}!stereo\+\_\+ugv@{stereo\+\_\+ugv}}
-\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
 {\footnotesize\ttfamily template$<$Cv\+Video\+Capture\+Type Type$>$ \\
 void stereo\+\_\+ugv\+::initialize (\begin{DoxyParamCaption}\item[{\hyperlink{classstereo__ugv_1_1CvVideoCaptureImageSource}{Cv\+Video\+Capture\+Image\+Source}$<$ Type $>$ $\ast$}]{source,  }\item[{const \hyperlink{classstereo__ugv_1_1Context}{Context} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 

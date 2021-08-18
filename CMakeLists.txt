@@ -27,6 +27,7 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(OpenCV 4 REQUIRED COMPONENTS
   calib3d
   core
+  cudawarping
   videoio
 )
 
@@ -145,6 +146,7 @@ add_library(${PROJECT_NAME}
   src/${PROJECT_NAME}/exception.cpp
   src/${PROJECT_NAME}/frame_layout.cpp
   src/${PROJECT_NAME}/image_source.cpp
+  src/${PROJECT_NAME}/image_undistorter.cpp
   src/${PROJECT_NAME}/lens_calibrator.cpp
 )
 

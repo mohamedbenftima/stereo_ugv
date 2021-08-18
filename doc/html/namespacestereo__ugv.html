@@ -95,6 +95,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1ImageSource.html">ImageSource</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class that reads a pair of images taken by a stereo camera at a time from various sources.  <a href="classstereo__ugv_1_1ImageSource.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1ImageUndistorter.html">ImageUndistorter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for undistorting images taken by a stereo camera such that they are ready for disparity estimation.  <a href="classstereo__ugv_1_1ImageUndistorter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstereo__ugv_1_1InvalidParameter.html">InvalidParameter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for errors due to unaccepted initialization parameters.  <a href="classstereo__ugv_1_1InvalidParameter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,6 +157,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acaec0936792769b5d676773f7d4070cd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#acaec0936792769b5d676773f7d4070cd">initialize</a> (<a class="el" href="classstereo__ugv_1_1CvVideoCaptureImageSource.html">CvVideoCaptureImageSource</a>&lt; Type &gt; *source, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
 <tr class="memdesc:acaec0936792769b5d676773f7d4070cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a CvVideoCaptureImageSource&lt;Type&gt;.  <a href="#acaec0936792769b5d676773f7d4070cd">More...</a><br /></td></tr>
 <tr class="separator:acaec0936792769b5d676773f7d4070cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab607b745fcce81036bd29780d14513e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#ab607b745fcce81036bd29780d14513e5">initialize</a> (<a class="el" href="classstereo__ugv_1_1ImageUndistorter.html">ImageUndistorter</a> *undistorter, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
+<tr class="memdesc:ab607b745fcce81036bd29780d14513e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes an <a class="el" href="classstereo__ugv_1_1ImageUndistorter.html" title="The class for undistorting images taken by a stereo camera such that they are ready for disparity est...">ImageUndistorter</a>.  <a href="#ab607b745fcce81036bd29780d14513e5">More...</a><br /></td></tr>
+<tr class="separator:ab607b745fcce81036bd29780d14513e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab7c44a98ba3f61baec2e4c1c9802bee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestereo__ugv.html#aab7c44a98ba3f61baec2e4c1c9802bee">initialize</a> (<a class="el" href="classstereo__ugv_1_1LensCalibrator.html">LensCalibrator</a> *calibrator, const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;context)</td></tr>
 <tr class="memdesc:aab7c44a98ba3f61baec2e4c1c9802bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <a class="el" href="classstereo__ugv_1_1LensCalibrator.html" title="The base class for calculating and saving undistortion coefficients of a stereo camera. ">LensCalibrator</a>.  <a href="#aab7c44a98ba3f61baec2e4c1c9802bee">More...</a><br /></td></tr>
 <tr class="separator:aab7c44a98ba3f61baec2e4c1c9802bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,8 +231,45 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab607b745fcce81036bd29780d14513e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab607b745fcce81036bd29780d14513e5">&#9670;&nbsp;</a></span>initialize() <span class="overload">[1/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stereo_ugv::initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstereo__ugv_1_1ImageUndistorter.html">ImageUndistorter</a> *&#160;</td>
+          <td class="paramname"><em>undistorter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classstereo__ugv_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes an <a class="el" href="classstereo__ugv_1_1ImageUndistorter.html" title="The class for undistorting images taken by a stereo camera such that they are ready for disparity est...">ImageUndistorter</a>. </p>
+<p>The underlying JSON object should look like: </p><div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;imageSource&quot;</span>: &lt;ImageSource&gt;,</div><div class="line">  <span class="stringliteral">&quot;undistortionFile&quot;</span>: &lt;<span class="keywordtype">string</span>&gt;,</div><div class="line">  <span class="stringliteral">&quot;newImageSize&quot;</span>: &lt;cv::Size&gt;</div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">undistorter</td><td>The image undistorter to be initialized. </td></tr>
+    <tr><td class="paramname">context</td><td>The context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac02cc03581ba53b911a9a7bd87f9a24c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac02cc03581ba53b911a9a7bd87f9a24c">&#9670;&nbsp;</a></span>initialize() <span class="overload">[1/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac02cc03581ba53b911a9a7bd87f9a24c">&#9670;&nbsp;</a></span>initialize() <span class="overload">[2/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +306,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a6971cc11001fdf589a71f6fb3099c65b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6971cc11001fdf589a71f6fb3099c65b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[2/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6971cc11001fdf589a71f6fb3099c65b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[3/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,7 +359,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="aaa158ec1ee9178414843adbbb91a394b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa158ec1ee9178414843adbbb91a394b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[3/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa158ec1ee9178414843adbbb91a394b">&#9670;&nbsp;</a></span>initialize() <span class="overload">[4/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,7 +396,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="adab204dc6f43824bcda4cd5e172d2812"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adab204dc6f43824bcda4cd5e172d2812">&#9670;&nbsp;</a></span>initialize() <span class="overload">[4/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adab204dc6f43824bcda4cd5e172d2812">&#9670;&nbsp;</a></span>initialize() <span class="overload">[5/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -390,7 +433,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="aab7c44a98ba3f61baec2e4c1c9802bee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab7c44a98ba3f61baec2e4c1c9802bee">&#9670;&nbsp;</a></span>initialize() <span class="overload">[5/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aab7c44a98ba3f61baec2e4c1c9802bee">&#9670;&nbsp;</a></span>initialize() <span class="overload">[6/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -428,7 +471,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a0a98148c84d1f085ac51c2f2fb7c8e7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a98148c84d1f085ac51c2f2fb7c8e7a">&#9670;&nbsp;</a></span>initialize() <span class="overload">[6/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a98148c84d1f085ac51c2f2fb7c8e7a">&#9670;&nbsp;</a></span>initialize() <span class="overload">[7/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -465,7 +508,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a8e8ff522fb8d2300fcdfc02ab0025e98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e8ff522fb8d2300fcdfc02ab0025e98">&#9670;&nbsp;</a></span>initialize() <span class="overload">[7/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8ff522fb8d2300fcdfc02ab0025e98">&#9670;&nbsp;</a></span>initialize() <span class="overload">[8/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +545,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="acaec0936792769b5d676773f7d4070cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaec0936792769b5d676773f7d4070cd">&#9670;&nbsp;</a></span>initialize() <span class="overload">[8/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acaec0936792769b5d676773f7d4070cd">&#9670;&nbsp;</a></span>initialize() <span class="overload">[9/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

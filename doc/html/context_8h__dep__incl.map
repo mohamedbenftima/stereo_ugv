@@ -2,4 +2,5 @@
 <area shape="rect" id="node2" href="$frame__layout_8h.html" title="Defines stereo_ugv::FrameLayout and its subclasses. " alt="" coords="17,109,209,180"/>
 <area shape="rect" id="node3" href="$image__source_8h.html" title="Defines stereo_ugv::ImageSource and its subclasses. " alt="" coords="15,228,210,299"/>
 <area shape="rect" id="node4" href="$lens__calibrator_8h.html" title="Defines stereo_ugv::LensCalibrator and its subclasses. " alt="" coords="23,347,203,417"/>
+<area shape="rect" id="node5" href="$image__undistorter_8h.html" title="Defines stereo_ugv::ImageUndistorter. " alt="" coords="15,465,210,536"/>
 </map>

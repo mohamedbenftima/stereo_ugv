@@ -1,0 +1,84 @@
+\hypertarget{classstereo__ugv_1_1ImageUndistorter}{}\section{stereo\+\_\+ugv\+:\+:Image\+Undistorter Class Reference}
+\label{classstereo__ugv_1_1ImageUndistorter}\index{stereo\+\_\+ugv\+::\+Image\+Undistorter@{stereo\+\_\+ugv\+::\+Image\+Undistorter}}
+
+
+The class for undistorting images taken by a stereo camera such that they are ready for disparity estimation.  
+
+
+
+
+{\ttfamily \#include $<$image\+\_\+undistorter.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classstereo__ugv_1_1ImageUndistorter_aef84d98cbcfc32fcdd725a7c3bcebf72}{set\+Image\+Source} (std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1ImageSource}{Image\+Source} $>$ \&\&source)
+\begin{DoxyCompactList}\small\item\em Sets the image source. \end{DoxyCompactList}\item 
+void \hyperlink{classstereo__ugv_1_1ImageUndistorter_a6351c3b0ff279c72e903fa1bde8400d7}{calculate\+Undistortion\+Maps} (const \hyperlink{structstereo__ugv_1_1LensCoefficients}{Lens\+Coefficients} \&coefficients, cv\+::\+Size new\+\_\+image\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Calculates maps for undistortion and stores them in internal variables. \end{DoxyCompactList}\item 
+void \hyperlink{classstereo__ugv_1_1ImageUndistorter_ac5d966202bb27b1590f44527bbf05394}{undistort} (cv\+::cuda\+::\+Gpu\+Mat $\ast$left, cv\+::cuda\+::\+Gpu\+Mat $\ast$right) const
+\begin{DoxyCompactList}\small\item\em Reads a pair of images from the internal image source and undistorts them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class for undistorting images taken by a stereo camera such that they are ready for disparity estimation. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstereo__ugv_1_1ImageUndistorter_a6351c3b0ff279c72e903fa1bde8400d7}\label{classstereo__ugv_1_1ImageUndistorter_a6351c3b0ff279c72e903fa1bde8400d7}} 
+\index{stereo\+\_\+ugv\+::\+Image\+Undistorter@{stereo\+\_\+ugv\+::\+Image\+Undistorter}!calculate\+Undistortion\+Maps@{calculate\+Undistortion\+Maps}}
+\index{calculate\+Undistortion\+Maps@{calculate\+Undistortion\+Maps}!stereo\+\_\+ugv\+::\+Image\+Undistorter@{stereo\+\_\+ugv\+::\+Image\+Undistorter}}
+\subsubsection{\texorpdfstring{calculate\+Undistortion\+Maps()}{calculateUndistortionMaps()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Image\+Undistorter\+::calculate\+Undistortion\+Maps (\begin{DoxyParamCaption}\item[{const \hyperlink{structstereo__ugv_1_1LensCoefficients}{Lens\+Coefficients} \&}]{coefficients,  }\item[{cv\+::\+Size}]{new\+\_\+image\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Calculates maps for undistortion and stores them in internal variables. 
+
+\begin{DoxyWarning}{Warning}
+This function should only be called after setting the image source because this function needs to know the size of input images. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em coefficients} & Undistortion coefficients calculated by the \hyperlink{classstereo__ugv_1_1LensCalibrator}{Lens\+Calibrator}. \\
+\hline
+{\em new\+\_\+image\+\_\+size} & The size of the undistorted images. If the input argument is 0x0, the same size as the input images will be used instead. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1ImageUndistorter_aef84d98cbcfc32fcdd725a7c3bcebf72}\label{classstereo__ugv_1_1ImageUndistorter_aef84d98cbcfc32fcdd725a7c3bcebf72}} 
+\index{stereo\+\_\+ugv\+::\+Image\+Undistorter@{stereo\+\_\+ugv\+::\+Image\+Undistorter}!set\+Image\+Source@{set\+Image\+Source}}
+\index{set\+Image\+Source@{set\+Image\+Source}!stereo\+\_\+ugv\+::\+Image\+Undistorter@{stereo\+\_\+ugv\+::\+Image\+Undistorter}}
+\subsubsection{\texorpdfstring{set\+Image\+Source()}{setImageSource()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Image\+Undistorter\+::set\+Image\+Source (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classstereo__ugv_1_1ImageSource}{Image\+Source} $>$ \&\&}]{source }\end{DoxyParamCaption})}
+
+
+
+Sets the image source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The image source. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1ImageUndistorter_ac5d966202bb27b1590f44527bbf05394}\label{classstereo__ugv_1_1ImageUndistorter_ac5d966202bb27b1590f44527bbf05394}} 
+\index{stereo\+\_\+ugv\+::\+Image\+Undistorter@{stereo\+\_\+ugv\+::\+Image\+Undistorter}!undistort@{undistort}}
+\index{undistort@{undistort}!stereo\+\_\+ugv\+::\+Image\+Undistorter@{stereo\+\_\+ugv\+::\+Image\+Undistorter}}
+\subsubsection{\texorpdfstring{undistort()}{undistort()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Image\+Undistorter\+::undistort (\begin{DoxyParamCaption}\item[{cv\+::cuda\+::\+Gpu\+Mat $\ast$}]{left,  }\item[{cv\+::cuda\+::\+Gpu\+Mat $\ast$}]{right }\end{DoxyParamCaption}) const}
+
+
+
+Reads a pair of images from the internal image source and undistorts them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The undistorted image taken by the left head. \\
+\hline
+{\em right} & The undistorted image taken by the right head. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{image__undistorter_8h}{image\+\_\+undistorter.\+h}\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/src/stereo\+\_\+ugv/image\+\_\+undistorter.\+cpp\end{DoxyCompactItemize}
