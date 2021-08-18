@@ -37,9 +37,12 @@ void initializeContextArguments(const ros::NodeHandle& node_handle, nlohmann::js
   *parameter_json = nlohmann::json::parse(stream);
 
   variable_map->clear();
-  const auto package_path{ ros::package::getPath("stereo_ugv") };
-  variable_map->emplace("configurationFolder", package_path + "/config");
-  variable_map->emplace("dataFolder", package_path + "/data");
+  ros::M_string map;
+  node_handle.getParam("variables", map);
+  for (const auto& [key, value] : map)
+  {
+    variable_map->emplace(key, value);
+  }
 }
 
 /**

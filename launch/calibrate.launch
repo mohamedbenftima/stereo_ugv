@@ -2,9 +2,19 @@
 
 <launch>
   <arg name="launch_prefix" default=""/>
+  <arg name="resolution" default="full"/>
   <arg name="parameter_file" default="$(find stereo_ugv)/config/calibrate.json"/>
 
   <node pkg="stereo_ugv" type="calibrate" name="calibrate" output="screen" launch-prefix="$(arg launch_prefix)">
     <param name="parameter_file" value="$(arg parameter_file)"/>
+    <param name="variables/lensCalibratorFile" value="$(find stereo_ugv)/config/lens_calibrator/chessboard.json"/>
+
+    <!-- Lens calibrator -->
+    <param name="variables/imageSourceFile" value="$(find stereo_ugv)/config/image_source/calibration.json"/>
+    <param name="variables/undistortionFilename" value="$(find stereo_ugv)/config/image_undistorter/hps3d160_$(arg resolution).xml"/>
+
+    <!-- Image source -->
+    <param name="variables/frameLayoutFile" value="$(find stereo_ugv)/config/frame_layout/hps3d160_$(arg resolution).json"/>
+    <param name="variables/imageSourceFilenamePattern" value="$(find stereo_ugv)/data/calibration/hps3d160_$(arg resolution)/%04d.jpg"/>
   </node>
 </launch>

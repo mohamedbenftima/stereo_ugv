@@ -1,6 +1,6 @@
 {
   "lensCalibrator": {
     "type": "file",
-    "filename": "${configurationFolder}/lens_calibrator/chessboard.json"
+    "filename": "${lensCalibratorFile}"
   }
 }
