@@ -7,6 +7,7 @@ var searchData=
   ['setmarker',['setMarker',['../classstereo__ugv_1_1ChessboardLensCalibrator.html#af2814fa1b58cdb9b2a8c3a1c46113da8',1,'stereo_ugv::ChessboardLensCalibrator']]],
   ['setmaximagecount',['setMaxImageCount',['../classstereo__ugv_1_1LensCalibrator.html#a8171c3a541429bd25ed64eb5140bbf2c',1,'stereo_ugv::LensCalibrator']]],
   ['setpatternsize',['setPatternSize',['../classstereo__ugv_1_1ChessboardLensCalibrator.html#aeda7a0a6538957e6174277931abf5cd4',1,'stereo_ugv::ChessboardLensCalibrator']]],
+  ['setpublisher',['setPublisher',['../classstereo__ugv_1_1ImagePublisher.html#a0ac69be931e19269b89b66da7bbfc00b',1,'stereo_ugv::ImagePublisher']]],
   ['setreleaseobject',['setReleaseObject',['../classstereo__ugv_1_1ChessboardLensCalibrator.html#a438ea74bec4002b39dee1985cba88948',1,'stereo_ugv::ChessboardLensCalibrator']]],
   ['setsquarelength',['setSquareLength',['../classstereo__ugv_1_1ChessboardLensCalibrator.html#a232059124de2dcb4467bd2a586c75273',1,'stereo_ugv::ChessboardLensCalibrator']]],
   ['setundistortionfilename',['setUndistortionFilename',['../classstereo__ugv_1_1LensCalibrator.html#a4debdb4b31e7b474576269cc15da15d7',1,'stereo_ugv::LensCalibrator']]]

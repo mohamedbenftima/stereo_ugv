@@ -1,7 +1,9 @@
 var searchData=
 [
+  ['image_5fpublisher_2eh',['image_publisher.h',['../image__publisher_8h.html',1,'']]],
   ['image_5fsource_2eh',['image_source.h',['../image__source_8h.html',1,'']]],
   ['image_5fundistorter_2eh',['image_undistorter.h',['../image__undistorter_8h.html',1,'']]],
+  ['imagepublisher',['ImagePublisher',['../classstereo__ugv_1_1ImagePublisher.html',1,'stereo_ugv']]],
   ['images',['IMAGES',['../namespacestereo__ugv.html#a5c139e7cfac12e9270ca903f1ce2e4bcab34687a3607271050f02aa9bf90c731a',1,'stereo_ugv']]],
   ['imagesize',['imageSize',['../classstereo__ugv_1_1FrameLayout.html#a12cc36a89f8e66ffc6a2fa5eb3c5f648',1,'stereo_ugv::FrameLayout::imageSize()'],['../classstereo__ugv_1_1HPS3D160FrameLayout.html#ab7fb47261d8a8132ac0ca7a15b69500e',1,'stereo_ugv::HPS3D160FrameLayout::imageSize()'],['../classstereo__ugv_1_1ImageSource.html#a30d9146abcdcef11f03685a9887b96d0',1,'stereo_ugv::ImageSource::imageSize()'],['../classstereo__ugv_1_1CvVideoCaptureImageSource.html#a84dd7dbd0ff6091d68843ca02a18e0cc',1,'stereo_ugv::CvVideoCaptureImageSource::imageSize()']]],
   ['imagesource',['ImageSource',['../classstereo__ugv_1_1ImageSource.html',1,'stereo_ugv']]],

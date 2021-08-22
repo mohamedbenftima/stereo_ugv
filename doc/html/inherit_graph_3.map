@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classstereo__ugv_1_1ImageSource.html" title="The base class that reads a pair of images taken by a stereo camera at a time from various sources..." alt="" coords="5,13,192,39"/>
-<area shape="rect" id="node2" href="$classstereo__ugv_1_1CvVideoCaptureImageSource.html" title="Class for image sources backended by cv::VideoCapture. " alt="" coords="240,5,447,47"/>
+<area shape="rect" id="node1" href="$classstereo__ugv_1_1FrameLayout.html" title="The base class that defines how images taken by two heads of a stereo camera are positioned in the sa..." alt="" coords="5,13,192,39"/>
+<area shape="rect" id="node2" href="$classstereo__ugv_1_1HPS3D160FrameLayout.html" title="The class of frame layout for HPS&#45;3D160 cameras. " alt="" coords="240,5,451,47"/>
 </map>

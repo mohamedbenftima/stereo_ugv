@@ -1,0 +1,3 @@
+<map id="stereo_ugv::CvGpuMatConverter" name="stereo_ugv::CvGpuMatConverter">
+<area shape="rect" id="node2" href="$classstereo__ugv_1_1CvMatConverter.html" title="The converter class from cv::Mat to sensor_msgs::Image. " alt="" coords="19,5,225,32"/>
+</map>

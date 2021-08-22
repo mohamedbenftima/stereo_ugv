@@ -1,0 +1,97 @@
+\hypertarget{classstereo__ugv_1_1ImagePublisher}{}\section{stereo\+\_\+ugv\+:\+:Image\+Publisher$<$ T $>$ Class Template Reference}
+\label{classstereo__ugv_1_1ImagePublisher}\index{stereo\+\_\+ugv\+::\+Image\+Publisher$<$ T $>$@{stereo\+\_\+ugv\+::\+Image\+Publisher$<$ T $>$}}
+
+
+A utility class for easily setting up an image publisher from context parameters and publishing images through this publisher.  
+
+
+
+
+{\ttfamily \#include $<$image\+\_\+publisher.\+h$>$}
+
+
+
+Inheritance diagram for stereo\+\_\+ugv\+:\+:Image\+Publisher$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classstereo__ugv_1_1ImagePublisher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for stereo\+\_\+ugv\+:\+:Image\+Publisher$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classstereo__ugv_1_1ImagePublisher__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classstereo__ugv_1_1ImagePublisher_a0ac69be931e19269b89b66da7bbfc00b}{set\+Publisher} (image\+\_\+transport\+::\+Publisher \&\&publisher)
+\begin{DoxyCompactList}\small\item\em Enables publishing images by setting the internal image\+\_\+transport\+::\+Publisher. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstereo__ugv_1_1ImagePublisher_acabc2dc754dc1e101911665fc6cc9ba1}\label{classstereo__ugv_1_1ImagePublisher_acabc2dc754dc1e101911665fc6cc9ba1}} 
+void \hyperlink{classstereo__ugv_1_1ImagePublisher_acabc2dc754dc1e101911665fc6cc9ba1}{unset\+Publisher} ()
+\begin{DoxyCompactList}\small\item\em Disables publishing images by unsetting the internal image\+\_\+transport\+::\+Publisher. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Arguments$>$ }\\void \hyperlink{classstereo__ugv_1_1ImagePublisher_a699e36f701182496561852715407ed37}{publish} (Arguments \&\&... arguments) const
+\begin{DoxyCompactList}\small\item\em Publishes an image through the internal image publisher if it is enabled. Otherwise, does nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class stereo\+\_\+ugv\+::\+Image\+Publisher$<$ T $>$}
+
+A utility class for easily setting up an image publisher from context parameters and publishing images through this publisher. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The base class that provides the convertion method from data of custom types and numbers to image messages.\\
+\hline
+\end{DoxyTemplParams}
+The template argument T should be default-\/constructible should defines operator()\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} operator(sensor\_msgs::Image* image, \textcolor{keyword}{const} T1 &argument1, \textcolor{keyword}{const} T2 &argument 2, ...) \textcolor{keyword}{const};
+\end{DoxyCode}
+ where argument1, argument2, ... are arguments used to create image. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstereo__ugv_1_1ImagePublisher_a699e36f701182496561852715407ed37}\label{classstereo__ugv_1_1ImagePublisher_a699e36f701182496561852715407ed37}} 
+\index{stereo\+\_\+ugv\+::\+Image\+Publisher@{stereo\+\_\+ugv\+::\+Image\+Publisher}!publish@{publish}}
+\index{publish@{publish}!stereo\+\_\+ugv\+::\+Image\+Publisher@{stereo\+\_\+ugv\+::\+Image\+Publisher}}
+\subsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename... Arguments$>$ \\
+void \hyperlink{classstereo__ugv_1_1ImagePublisher}{stereo\+\_\+ugv\+::\+Image\+Publisher}$<$ T $>$\+::publish (\begin{DoxyParamCaption}\item[{Arguments \&\&...}]{arguments }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Publishes an image through the internal image publisher if it is enabled. Otherwise, does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arguments} & Arguments that are used to create the image message to be published. These arguments, together with a pointer to the internal image buffer, are passed to the T::operator() function to create the image message, where T is the template argument to this class. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstereo__ugv_1_1ImagePublisher_a0ac69be931e19269b89b66da7bbfc00b}\label{classstereo__ugv_1_1ImagePublisher_a0ac69be931e19269b89b66da7bbfc00b}} 
+\index{stereo\+\_\+ugv\+::\+Image\+Publisher@{stereo\+\_\+ugv\+::\+Image\+Publisher}!set\+Publisher@{set\+Publisher}}
+\index{set\+Publisher@{set\+Publisher}!stereo\+\_\+ugv\+::\+Image\+Publisher@{stereo\+\_\+ugv\+::\+Image\+Publisher}}
+\subsubsection{\texorpdfstring{set\+Publisher()}{setPublisher()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \hyperlink{classstereo__ugv_1_1ImagePublisher}{stereo\+\_\+ugv\+::\+Image\+Publisher}$<$ T $>$\+::set\+Publisher (\begin{DoxyParamCaption}\item[{image\+\_\+transport\+::\+Publisher \&\&}]{publisher }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables publishing images by setting the internal image\+\_\+transport\+::\+Publisher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em publisher} & The internal image publisher. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{image__publisher_8h}{image\+\_\+publisher.\+h}\end{DoxyCompactItemize}

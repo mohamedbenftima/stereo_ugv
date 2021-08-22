@@ -1,0 +1,59 @@
+\hypertarget{classstereo__ugv_1_1CvMatConverter}{}\section{stereo\+\_\+ugv\+:\+:Cv\+Mat\+Converter Class Reference}
+\label{classstereo__ugv_1_1CvMatConverter}\index{stereo\+\_\+ugv\+::\+Cv\+Mat\+Converter@{stereo\+\_\+ugv\+::\+Cv\+Mat\+Converter}}
+
+
+The converter class from cv\+::\+Mat to sensor\+\_\+msgs\+::\+Image.  
+
+
+
+
+{\ttfamily \#include $<$image\+\_\+publisher.\+h$>$}
+
+
+
+Inheritance diagram for stereo\+\_\+ugv\+:\+:Cv\+Mat\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classstereo__ugv_1_1CvMatConverter__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classstereo__ugv_1_1CvMatConverter_ad637bfe9ffdf0a07332e516d1aeafe29}{operator()} (sensor\+\_\+msgs\+::\+Image $\ast$image, const cv\+::\+Mat \&matrix) const
+\begin{DoxyCompactList}\small\item\em Converts a cv\+::\+Mat of B\+G\+R8 color type to sensor\+\_\+msgs\+::\+Image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The converter class from cv\+::\+Mat to sensor\+\_\+msgs\+::\+Image. 
+
+\begin{DoxyWarning}{Warning}
+Currently, only matrices of B\+G\+R8 color type are supported. Passing matrices of other types causes undefined behaviour. 
+\end{DoxyWarning}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstereo__ugv_1_1CvMatConverter_ad637bfe9ffdf0a07332e516d1aeafe29}\label{classstereo__ugv_1_1CvMatConverter_ad637bfe9ffdf0a07332e516d1aeafe29}} 
+\index{stereo\+\_\+ugv\+::\+Cv\+Mat\+Converter@{stereo\+\_\+ugv\+::\+Cv\+Mat\+Converter}!operator()@{operator()}}
+\index{operator()@{operator()}!stereo\+\_\+ugv\+::\+Cv\+Mat\+Converter@{stereo\+\_\+ugv\+::\+Cv\+Mat\+Converter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void stereo\+\_\+ugv\+::\+Cv\+Mat\+Converter\+::operator() (\begin{DoxyParamCaption}\item[{sensor\+\_\+msgs\+::\+Image $\ast$}]{image,  }\item[{const cv\+::\+Mat \&}]{matrix }\end{DoxyParamCaption}) const}
+
+
+
+Converts a cv\+::\+Mat of B\+G\+R8 color type to sensor\+\_\+msgs\+::\+Image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The destination image message. \\
+\hline
+{\em matrix} & The source matrix. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/include/stereo\+\_\+ugv/\hyperlink{image__publisher_8h}{image\+\_\+publisher.\+h}\item 
+/home/yunhao/stereo\+\_\+ugv/src/stereo\+\_\+ugv/src/stereo\+\_\+ugv/image\+\_\+publisher.\+cpp\end{DoxyCompactItemize}

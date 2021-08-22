@@ -145,6 +145,7 @@ add_library(${PROJECT_NAME}
   src/${PROJECT_NAME}/context.cpp
   src/${PROJECT_NAME}/exception.cpp
   src/${PROJECT_NAME}/frame_layout.cpp
+  src/${PROJECT_NAME}/image_publisher.cpp
   src/${PROJECT_NAME}/image_source.cpp
   src/${PROJECT_NAME}/image_undistorter.cpp
   src/${PROJECT_NAME}/lens_calibrator.cpp
